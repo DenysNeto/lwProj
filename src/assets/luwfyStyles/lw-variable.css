@@ -1,0 +1,1173 @@
+/* CSS variables */
+
+:root {
+  --lw-primary-rgb: 0, 92, 153; /* The r, g, and b components of the theme primary color */
+  --lw-primary: rgb(var(--lw-primary-rgb)); /* The theme primary color */
+  --lw-primary-color: #ffffff; /* Text color on top of a primary background */
+  --lw-secondary: #2d2d30; /* The theme secondary color */
+  --lw-secondary-color: #ffffff; /* Text color on top of a secondary background */
+  --lw-error-rgb: 176, 0, 32; /* The theme error color */
+  --lw-error: rgb(var(--lw-error-rgb)); /* The theme error color */
+  --lw-error-color: #ffffff; /* Text color on top of a error background */
+  --lw-success: #8bc34a; /* The theme success color */
+  --lw-success-color: #ffffff; /* Text color on top of a success background */
+  --lw-background: #fefefe; /* The theme background color. The background color appears behind scrollable content.*/
+  --lw-background-color: #5a5a5a; /* Text color on top of a background background */
+  --lw-surface: #f5f5f5; /* The theme surface color. Surface colors affect surfaces of components, such as cards, sheets, and menus. */
+  --lw-surface-color: #323232; /* Text color on top of a surface surface */
+  --lw-disabled: #cccccc; /* The theme primary color in disabled state. */
+  --lw-disabled-color: #555; /* Text color on top of a theme background in disabled state */
+  --lw-ui-state-hover: #ebebeb; /* Hover state background. */
+  --lw-ui-state-color-hover: #333; /* Text color, when UI Element's state is 'hover'. */
+  --lw-ui-state-border-hover: #ebebeb; /* Border color, when UI Element's state is 'hover'. */
+  --lw-ui-state-active: var(--lw-primary); /* Active state background. */
+  --lw-ui-state-color-active: var(
+    --lw-primary-color
+  ); /* Text color, when UI Element's state is 'active'. */
+  --lw-ui-state-border-active: var(
+    --lw-primary
+  ); /* Border color, when UI Element's state is 'active'. */
+  --lw-ui-state-focus: #e2e0e0; /* Focus state background. */
+  --lw-ui-state-color-focus: #333; /* Text color, when UI Element's state is 'focus'. */
+  --lw-ui-state-border-focus: #e2e0e0; /* Border color, when UI Element's state is 'focus'. */
+  --lw-ui-state-selected: rgba(
+    var(--lw-primary-rgb),
+    0.1
+  ); /* Selected state background. */
+  --lw-ui-state-color-selected: var(
+    --lw-primary
+  ); /* Text color, when UI Element's state is 'selected'. */
+  --lw-ui-state-border-selected: rgba(
+    var(--lw-primary-rgb),
+    0.1
+  ); /* Border color, when UI Element's state is 'selected'. */
+  --lw-item-border-width: 1px; /* Theme border-width */
+  --lw-item-border-radius: var(
+    --lw-border-radius
+  ); /* Border radius of items. */
+  --lw-item-border-top-left-radius: var(
+    --lw-border-radius
+  ); /* Border top-left radius of items. */
+  --lw-item-border-top-right-radius: var(
+    --lw-border-radius
+  ); /* Border top-right radius of items. */
+  --lw-item-border-bottom-left-radius: var(
+    --lw-border-radius
+  ); /* Border bottom-left radius of items. */
+  --lw-item-border-bottom-right-radius: var(
+    --lw-border-radius
+  ); /* Border bottom-right radius of items. */
+  --lw-font-size: 14px; /* Theme font-size */
+  --lw-font-weight: inherit; /* Theme font-weight */
+  --lw-font-family: Roboto, "Helvetica Neue", sans-serif; /* Theme font-family */
+  --lw-font-family-icon: lw-icons; /* Theme icons font-family. */
+  --lw-font-family-icon-src: local("../font/lw-icons"),
+    url("../font/lw-icons.woff2") format("woff2"),
+    url("../font/lw-icons.woff") format("woff"),
+    url("../font/lw-icons.ttf") format("truetype"),
+    url("../font/lw-icons.eot") format("embedded-opentype"); /* The source of the theme icons font-family */
+  --lw-border-width: 1px; /* Theme border-width */
+  --lw-border-radius: 4px; /* Theme border-radius */
+  --lw-border-top-left-radius: var(
+    --lw-border-radius
+  ); /* Theme border-radius */
+  --lw-border-top-right-radius: var(
+    --lw-border-radius
+  ); /* Theme border-radius */
+  --lw-border-bottom-left-radius: var(
+    --lw-border-radius
+  ); /* Theme border-radius */
+  --lw-border-bottom-right-radius: var(
+    --lw-border-radius
+  ); /* Theme border-radius */
+  --lw-border: #e0e0e0; /* The theme background border color */
+  --lw-outline: #b2b2b2; /* The theme active element outline color */
+  --lw-editor-selection: var(
+    --lw-primary
+  ); /* Background color of the selected text. */
+  --lw-editor-selection-color: var(
+    --lw-primary-color
+  ); /* Color of the selected text. */
+  --lw-alternation-index0-color: var(
+    --lw-surface-color
+  ); /* Alternation color for index0 */
+  --lw-alternation-index0-border: var(
+    --lw-surface
+  ); /* Alternation border color for index0 */
+  --lw-alternation-index0-background: var(
+    --lw-surface
+  ); /* Alternation background color for index0 */
+  --lw-alternation-index1-color: #111; /*Alternation color for index1 */
+  --lw-alternation-index1-border: #9bbb59; /* Alternation border color for index1 */
+  --lw-alternation-index1-background: #9bbb59; /* Alternation background color for index1 */
+  --lw-alternation-index2-color: #fff; /*Alternation color for index2 */
+  --lw-alternation-index2-border: #fc3752; /* Alternation border color for index2 */
+  --lw-alternation-index2-background: #fc3752; /* Alternation background color for index2 */
+  --lw-tick-color: var(
+    --lw-border
+  ); /* Default tick color for lwTank, lwSlider and lwGauge */
+  --lw-tick-label-color: var(
+    --lw-background-color
+  ); /* Default tick label color for lwTank, lwSlider and lwGauge */
+  --lw-box-height: 450px; /* Default height for Dialog, Gauge, Accordion, Tabs, Tree, Array */
+  --lw-box-width: 450px; /* Default width for  Dialog, Gauge, Accordion, Tabs, Tree, Array */
+  --lw-bar-height: 48px; /* Default height for headers and footers */
+  --lw-bar-width: 400px; /* Default width for headers and footers */
+  --lw-editor-height: 30px; /* Default height for editors */
+  --lw-editor-width: 250px; /* Default width for editors */
+  --lw-editor-drop-down-width: 300px; /* Default width for editors drop-down */
+  --lw-editor-drop-down-height: 400px; /* Default height for editors drop-down */
+  --lw-editor-drop-down-padding-size: 3px; /* lwDropDownList, lwComboBox drop down default height */
+  --lw-editor-drop-down-max-width: 800px; /* lwDropDownList, lwComboBox, lwTextBox popup max width */
+  --lw-editor-drop-down-min-width: 100px; /* lwDropDownList, lwComboBox, lwTextBox popup min width */
+  --lw-editor-drop-down-max-height: 400px; /* lwDropDownList, lwComboBox, lwTextBox popup max height */
+  --lw-editor-drop-down-min-height: 50px; /* lwDropDownList, lwComboBox, lwTextBox popup min height */
+  --lw-editor-drop-down-resize-bar-height: 15px; /* lwDropDownList, lwComboBox, lwTextBox popup resize bar default height */
+  --lw-editor-drop-down-vertical-offset: 5px; /* Vertical offset of editor drop downs */
+  --lw-editor-drop-down-z-index: 9999; /* z-index of editor drop downs */
+  --lw-editor-label-padding: 4px; /* Default padding for inputs */
+  --lw-editor-addon-width: 27px; /* Default width for spin buttons, dropdown buttons. */
+  --lw-column-icon-size: 30px; /* Default size of column icons */
+  --lw-icon-table: "\e800"; /* Code of table icon */
+  --lw-icon-star: "\e801"; /* Code of star icon */
+  --lw-icon-star-empty: "\e802"; /* Code of empty star icon */
+  --lw-icon-plus: "\e803"; /* Code of plus icon */
+  --lw-icon-minus: "\e804"; /* Code of minus icon */
+  --lw-icon-attention-circled: "\e805"; /* Code of circled attention icon */
+  --lw-icon-align-left: "\e806"; /* Code of align left icon */
+  --lw-icon-align-right: "\e807"; /* Code of align right icon */
+  --lw-icon-align-center: "\e808"; /* Code of align center icon */
+  --lw-icon-reload: "\e809"; /* Code of reload icon */
+  --lw-icon-cancel: "\e80d"; /* Code of cancel icon */
+  --lw-icon-close: "\e80d"; /* Code of close icon */
+  --lw-icon-cancel-circled: "\e80e"; /* Code of circled cancel icon */
+  --lw-icon-plus-circled: "\e810"; /* Code of circled plus icon */
+  --lw-icon-power: "\e811"; /* Code of power icon */
+  --lw-icon-minus-circled: "\e814"; /* Code of circled minus icon */
+  --lw-icon-arrow-up-alt: "\e817"; /* Code of alternative up arrow icon */
+  --lw-icon-radio: "\e818"; /* Code of radio icon */
+  --lw-icon-refresh: "\e819"; /* Code of refresh icon */
+  --lw-icon-chart: "\e81a"; /* Code of chart icon */
+  --lw-icon-check-squared: "\e81b"; /* Code of squared check icon */
+  --lw-icon-resize-full: "\e81c"; /* Code of full resize icon */
+  --lw-icon-resize-small: "\e81d"; /* Code of small resize icon */
+  --lw-icon-resize-vertical: "\e80c"; /* Code of vertical resize icon */
+  --lw-icon-resize-horizontal: "\e80f"; /* Code of horizontal resize icon */
+  --lw-icon-lock: "\e821"; /* Code of lock icon */
+  --lw-icon-sort: "\e823"; /* Code of sort icon */
+  --lw-icon-delete: "\e826"; /* Code of delete icon */
+  --lw-icon-search: "\e828"; /* Code of search icon */
+  --lw-icon-calendar: "\e829"; /* Code of calendar icon */
+  --lw-icon-edit: "\e82a"; /* Code of edit icon */
+  --lw-icon-popup: "\e82c"; /* Code of popup icon */
+  --lw-icon-lock-open: "\e82e"; /* Code of open lock icon */
+  --lw-icon-add-filter: "\e82f"; /* Code of add filter icon */
+  --lw-icon-block: "\e832"; /* Code of block icon */
+  --lw-icon-settings: "\e833"; /* Code of settings icon */
+  --lw-icon-duplicate: "\e834"; /* Code of duplicate icon */
+  --lw-icon-copy-record: "\e835"; /* Code of copy record icon */
+  --lw-icon-download-alt: "\e836"; /* Code of alternative download icon */
+  --lw-icon-clock: "\e837"; /* Code of clock icon */
+  --lw-icon-attention: "\e838"; /* Code of attention icon */
+  --lw-icon-help-circled: "\e839"; /* Code of circled help icon */
+  --lw-icon-mail: "\e83c"; /* Code of mail icon */
+  --lw-icon-up: "\e83f"; /* Code of up icon */
+  --lw-icon-first-page: "\e900"; /* Code of first page icon */
+  --lw-icon-arrow-down: "\e901"; /* Code of down arrow icon */
+  --lw-icon-arrow-left: "\e902"; /* Code of left arrow icon */
+  --lw-icon-arrow-right: "\e903"; /* Code of right arrow icon */
+  --lw-icon-arrow-up: "\e904"; /* Code of up arrow icon */
+  --lw-icon-arrow-down-filled: "\e812"; /* Code of filled down arrow icon */
+  --lw-icon-arrow-left-filled: "\e816"; /* Code of filled left arrow icon */
+  --lw-icon-arrow-right-filled: "\e81e"; /* Code of filled right arrow icon */
+  --lw-icon-arrow-up-filled: "\e815"; /* Code of filled up arrow icon */
+  --lw-icon-last-page: "\e905"; /* Code of last page icon */
+  --lw-icon-more-horiz: "\e906"; /* Code of more icon */
+  --lw-icon-skip-next: "\e907"; /* Code of skip next icon */
+  --lw-icon-check: "\e908"; /* Code of check icon */
+  --lw-icon-mode-edit: "\e909"; /* Code of edit mode icon */
+  --lw-icon-replay: "\e90c"; /* Code of replay icon */
+  --lw-icon-visibility: "\e90d"; /* Code of visibility icon */
+  --lw-icon-visibility-off: "\e90e"; /* Code of visibility off icon */
+  --lw-icon-link-ext: "\f08e"; /* Code of link icon */
+  --lw-icon-check-empty: "\f096"; /* Code of empty check icon */
+  --lw-icon-filter: "\f0b0"; /* Code of filter icon */
+  --lw-icon-resize-full-alt: "\f0b2"; /* Code of full resize alternative icon */
+  --lw-icon-menu: "\f0c9"; /* Code of menu icon */
+  --lw-icon-sort-1: "\f0dc"; /* Code of sort alternative icon */
+  --lw-icon-paste: "\f0ea"; /* Code of paste icon */
+  --lw-icon-circle-empty: "\f10c"; /* Code of empty circle icon */
+  --lw-icon-circle: "\f111"; /* Code of circle icon */
+  --lw-icon-ellipsis: "\f141"; /* Code of ellipsis icon */
+  --lw-icon-minus-squared: "\f146"; /* Code of squared minus icon */
+  --lw-icon-ok-squared: "\f14a"; /* Code of squared ok icon */
+  --lw-icon-sort-name-up: "\f15d"; /* Code of sort name up icon */
+  --lw-icon-sort-name-down: "\f15e"; /* Code of sort name down icon */
+  --lw-icon-sort-alt-up: "\f160"; /* Code of sort up alternative icon */
+  --lw-icon-sort-alt-down: "\f161"; /* Code of sort down alternative icon */
+  --lw-icon-sort-number-up: "\f162"; /* Code of sort number up icon */
+  --lw-icon-sort-number-down: "\f163"; /* Code of sort number down icon */
+  --lw-icon-dot-circled: "\f192"; /* Code of circled dot icon */
+  --lw-icon-toggle-off: "\f204"; /* Code of toggle off icon */
+  --lw-icon-toggle-on: "\f205"; /* Code of toggle on icon */
+  --lw-icon-group: "\f247"; /* Code of group icon */
+  --lw-icon-ungroup: "\f248"; /* Code of ungroup icon */
+  --lw-icon-window-maximize: "\f2d0"; /* Code of maximize window icon */
+  --lw-icon-window-minimize: "\f2d1"; /* Code of minimize window icon */
+  --lw-icon-window-restore: "\f2d2"; /* Code of restore window icon */
+  --lw-icon-window-pin-alt: "\e82d"; /* Code of pin window alternative icon */
+  --lw-icon-window-pin: "\e80a"; /* Code of window pin icon */
+  --lw-icon-docs: "\f0c5"; /* Code of docs icon */
+  --lw-icon-math: "\f01a"; /* Code of math icon */
+  --lw-icon-spin: "\e80b"; /* Code of spin icon */
+  --lw-icon-user: "\e81f"; /* Code of user icon */
+  --lw-icon-font: "\f031"; /* Code of user icon */
+  --lw-icon-contains: "\f063"; /* Code of contains icon */
+  --lw-icon-starts_with: "\f064"; /* Code of starts with icon */
+  --lw-icon-ends_with: "\f065"; /* Code of ends with icon */
+  --lw-icon-does_not_contain: "\f066"; /* Code of does not contain icon */
+  --lw-icon-equals: "\f52c"; /* Code of equals icon */
+  --lw-icon-greater-than: "\f531"; /* Code of greater than icon */
+  --lw-icon-greater-than-equal: "\f532"; /* Code of greater than or equal icon */
+  --lw-icon-less-than: "\f536"; /* Code of less than icon */
+  --lw-icon-less-than-equal: "\f537"; /* Code of less than or equal icon */
+  --lw-icon-not-equal: "\f53e"; /* Code of not equal icon */
+  --lw-icon-percentage: "\f541"; /* Code of percentage icon */
+  --lw-icon-grip-vertical: "\f58e"; /* Code of grip icon */
+  --lw-icon-between: "\f06a"; /* Code of between icon */
+  /* Accordion */
+  --lw-accordion-animation-duration: 225ms; /* lwAccordion animation duration */
+  --lw-accordion-default-width: var(
+    --lw-box-width
+  ); /* lwAccordion default width */
+  --lw-accordion-default-height: var(
+    --lw-box-height
+  ); /* lwAccordion default height */
+  --lw-accordion-expanded-content-height: 0px; /* Determines expanded content's height */
+  --lw-accordion-expanded-content-local-height: 0px; /* The height of an expanded item content part. Calculated dynamically for each item. Used in all modes except 'singleFitHeight'. */
+  --lw-accordion-item-header-height: var(
+    --lw-bar-height
+  ); /* Element's header height. Used in several calcilations related to items height. */
+  --lw-accordion-item-expanded-offset: 20px; /* An offset below each expanded accordion item. */
+  /* Array */
+  --lw-array-default-width: var(--lw-box-width); /* lwArray default width */
+  --lw-array-default-height: var(--lw-box-height); /* lwArray default height */
+  --lw-array-element-gap: 3px; /* lwArray element gap size */
+  /* Breadcrumb */
+  --lw-breadcrumb-default-width: 400px; /* lwBreadcrumb default width */
+  --lw-breadcrumb-default-height: auto; /* lwBreadcrumb default height */
+  --lw-breadcrumb-padding: 10px; /* Padding of lw-breadcrumb and vertical offset between lwBreadcrumb items */
+  --lw-breadcrumb-drop-down-width: var(
+    --lw-editor-drop-down-width
+  ); /* Width of lwBreadcrumb dropdown in minimized mode */
+  --lw-breadcrumb-item-height: 40px; /* Height of lwBreadcrumb items */
+  --lw-breadcrumb-horizontal-offset: 10px; /* Horizontal offset between lwBreadcrumb items */
+  /* Button - Default */
+  --lw-button-text-transform: uppercase; /* Controls the capitalization of button's text. Could be set as uppercase/lowercase/capitalize. */
+  --lw-button-padding: 8px 16px; /* Sets button's paddings. */
+  --lw-button-large-padding: 10px 16px; /* Sets large button's paddings. */
+  --lw-button-large-font-size: 18px; /* Sets large button's font size. */
+  --lw-button-small-padding: 5px 10px; /* Sets small button's paddings. */
+  --lw-button-small-font-size: 12px; /* Sets small button's font size. */
+  --lw-button-very-small-padding: 1px 5px; /* Sets very small button's paddings. */
+  --lw-button-very-small-font-size: 12px; /* Sets very small button's font size. */
+  /* Button - Flat */
+  --lw-button-flat-color: var(
+    --lw-background-color
+  ); /* The color of the flat button. */
+  /* Button - Outlined */
+  --lw-button-outlined-color: var(
+    --lw-background-color
+  ); /* The color of the outlined button. */
+  --lw-button-outlined-border: var(
+    --lw-border
+  ); /* The border of the outlined button. */
+  /* Calendar */
+  --lw-calendar-header-height: calc(
+    0.75 * var(--lw-bar-height)
+  ); /* Default height for lwCalendar's header section */
+  --lw-calendar-footer-height: calc(
+    0.75 * var(--lw-bar-height)
+  ); /* Default height for lwCalendar's footer section */
+  --lw-calendar-title-height: calc(
+    1.25 * var(--lw-bar-height)
+  ); /* Default height for calendar's title. */
+  --lw-calendar-cell-size: 30px; /* Default size of calendar's cell. */
+  --lw-calendar-cell-spacing: 4px; /* Defines calendar's cell spacing. */
+  --lw-calendar-default-width: calc(
+    50px + var(--lw-calendar-cell-spacing) + 7 *
+      (var(--lw-calendar-cell-spacing) + var(--lw-calendar-cell-size))
+  ); /* lwCalendar default width */
+  --lw-calendar-default-height: calc(
+    var(--lw-calendar-cell-spacing) + 7 *
+      (var(--lw-calendar-cell-spacing) + var(--lw-calendar-cell-size)) +
+      var(--lw-calendar-header-height)
+  ); /* lwCalendar default height */
+  --lw-calendar-title-text-transform: initial; /* Controls the capitalization of the title text. */
+  --lw-calendar-week-title-text-transform: uppercase; /* Controls the capitalization of the week title. */
+  --lw-calendar-header-text-transform: uppercase; /* Controls the capitalization of the header text. */
+  --lw-calendar-footer-text-transform: uppercase; /* Controls the capitalization of the footer text. */
+  --lw-calendar-cell-border-top-right-radius: 15px; /* Defines cell's top-right border radius. */
+  --lw-calendar-cell-border-top-left-radius: 15px; /* Defines cell's top-left border radius. */
+  --lw-calendar-cell-border-bottom-left-radius: 15px; /* Defines cell's bottom-left border radius. */
+  --lw-calendar-cell-border-bottom-right-radius: 15px; /* Defines cell's bottom-right border radius. */
+  --lw-calendar-title-padding: 10px; /* Defines title's padding */
+  --lw-calendar-important-date-background: var(
+    --lw-ui-state-hover
+  ); /* Defines title's padding */
+  --lw-calendar-important-date-color: var(
+    --lw-ui-state-color-hover
+  ); /* Defines title's padding */
+  --lw-calendar-important-date-border-color: var(
+    --lw-ui-state-border-hover
+  ); /* Defines title's padding */
+  /* CardView */
+  --lw-card-view-default-width: 1200px; /* Default width of CardView. */
+  --lw-card-view-default-height: 800px; /* Default height of CardView. */
+  --lw-card-view-header-height: 30px; /* Height of the CardView header */
+  --lw-card-view-cover-height: var(
+    --lw-carousel-default-height
+  ); /* Height of CardView cover (carousel). */
+  --lw-card-view-vertical-offset: 15px; /* Vertical offset of CardView. */
+  --lw-card-view-column-min-width: 250px; /* Min width of CardView visual columns. */
+  --lw-card-view-gap: 10px; /* Gap between CardView cards. */
+  --lw-card-view-add-new-button-size: 60px; /* Size of the 'Add new record' (+) button. */
+  /* Carousel */
+  --lw-carousel-default-width: 600px; /* default width of the element */
+  --lw-carousel-default-height: 200px; /* default height of the element */
+  --lw-carousel-3d-mode-slide-width: 400px; /* default width of a slide in 3d mode */
+  --lw-carousel-3d-mode-slide-height: 400px; /* default height of a slide in 3d mode */
+  --lw-carousel-multiple-mode-slide-width: 200px; /* default width of a slide in multiple mode*/
+  /* Chart */
+  --lw-chart-default-width: 850px; /* default width of the element */
+  --lw-chart-default-height: 500px; /* default height of the element */
+  /* Check Box */
+  --lw-check-box-default-size: calc(
+    1px + 1 / 2 * var(--lw-editor-height)
+  ); /* Default size for the check box used in lwCheckBox and lwListItem. */
+  /* ColorPanel*/
+  --lw-color-panel-default-width: auto; /* lwColorPanel default width ; was 450px*/
+  --lw-color-panel-default-height: auto; /* lwColorPanel default height ; was 370px */
+  --lw-color-panel-palette-size: 300px; /* lwColorPanel palette size */
+  --lw-color-panel-grid-mode-item-size: 20px; /* lwColorPanel item size */ /*was 40px*/
+  --lw-color-panel-grid-mode-column-count: 8; /* lwColorPanel column count */
+  --lw-color-panel-grid-mode-columns-gap: 1px; /* lwColorPanel column gap size */
+  --lw-color-panel-brightness: 0; /* lwColorPanel brightness */
+  --lw-color-panel-default-mode-sections-gap: 8px; /* lwColorPanel gap size in default mode */
+  --lw-color-panel-palette-width: var(
+    --lw-color-panel-palette-size
+  ); /* lwColorPanel palette width */
+  --lw-color-panel-palette-height: var(
+    --lw-color-panel-palette-size
+  ); /* lwColorPanel palette height */
+  --lw-color-panel-alpha-channel-color: white; /* Used as a default color for the Alpha Scale */
+  /* ColorPicker*/
+  --lw-color-picker-default-width: var(
+    --lw-editor-width
+  ); /* lwColorPicker default width */
+  --lw-color-picker-default-height: var(
+    --lw-editor-height
+  ); /* lwColorPicker default height */
+  --lw-color-picker-drop-down-width: auto; /* lwColorPicker default width */
+  --lw-color-picker-drop-down-height: auto; /* lwColorPicker default height */
+  /* ComboBox */
+  --lw-combo-box-default-width: var(
+    --lw-editor-width
+  ); /* lwComboBox default width */
+  --lw-combo-box-default-height: var(
+    --lw-editor-height
+  ); /* lwComboBox default height */
+  --lw-combo-box-drop-down-width: auto; /* lwComboBox default width */
+  --lw-combo-box-drop-down-height: auto; /* lwComboBox default height */
+  /* Chip */
+  --lw-chip-default-height: var(--lw-editor-height); /* Default chips height */
+  --lw-chip-avatar-background: var(
+    --lw-secondary
+  ); /* Default avatar background color */
+  /* Currency format panel */
+  --lw-currency-format-panel-currency-holder-width: 1fr;
+  --lw-currency-format-panel-apply-button-width: 125px;
+  --lw-currency-format-panel-header-holder-offset: 2%;
+  --lw-currency-format-panel-currency-holder-input-width: 1fr;
+  --lw-currency-format-panel-currency-holder-dropdown-width: 165px;
+  --lw-currency-format-panel-currency-holder-dropdown-button-width: 95%;
+  --lw-currency-format-panel-border-size: 1px;
+  --lw-currency-format-panel-border-color: #ccc;
+  --lw-currency-format-panel-border-radius: 4px;
+  --lw-currency-format-panel-currencies-margin-top: 15px;
+  --lw-currency-format-panel-currencies-max-height: 400px;
+  --lw-currency-format-panel-currencies-item-padding: 12px;
+  --lw-currency-format-panel-currency-holder-padding-left: 5px;
+  --lw-currency-format-panel-currency-holder-padding-top: 3px;
+  --lw-currency-format-panel-currency-holder-padding-bottom: 3px;
+  --lw-currency-format-panel-currency-input-width: 100%;
+  --lw-currency-format-panel-currencies-left-padding: 10px;
+  --lw-currency-format-panel-currencies-hover-background: #f1f1f1;
+  --lw-currency-format-panel-currencies-example-format-color: #777;
+  /* DataView - Common for CardView and Kanban */
+  --lw-data-view-padding: 10px; /* Padding of the CardView and Kanban */
+  --lw-data-view-customize-panel-width: 200px; /* Width of the CardView and Kanban customize panel (drop down). */
+  --lw-data-view-filter-panel-width: 550px; /* Width of the CardView and Kanban filter panel (drop down). */
+  --lw-data-view-sort-panel-width: 400px; /* Width of the CardView and Kanban sort panel (drop down). */
+  --lw-data-view-search-panel-width: 250px; /* Width of the CardView and Kanban search panel (drop down). */
+  /* Date Format Panel */
+  --lw-date-format-panel-main-container-width: 960px; /* Main container */
+  --lw-date-format-panel-main-container-padding: 15px;
+  --lw-date-format-panel-border-radius: 4px; /* Default styles */
+  --lw-date-format-panel-border-size: 1px;
+  --lw-date-format-panel-border-color: #ccc;
+  --lw-date-format-panel-lw-inputs-container-width: 1fr; /* Input and add format holder */
+  --lw-date-format-panel-apply-container-width: 150px;
+  --lw-date-format-panel-lw-input-buttons-column-gap: 2%;
+  --lw-date-format-panel-lw-inputs-holder-width: 94%; /* Input and add format holder child */
+  --lw-date-format-panel-add-format-holder-width: 6%;
+  --lw-date-format-panel-lw-inputs-list-holder-offset: 2px;
+  --lw-date-format-panel-lw-input-format-width: 150px; /* Smart inputs */
+  --lw-date-format-panel-lw-input-sign-width: 80px;
+  --lw-date-format-panel-lw-input-height: 25px;
+  --lw-date-format-panel-each-lw-input-offset: 4px;
+  --lw-date-format-panel-all-format-holders-width: 255px;
+  --lw-date-format-panel-add-format-holder-button: 120px;
+  --lw-date-format-panel-each-add-format-holder-width: 120px; /* Add new format */
+  --lw-date-format-panel-add-new-format-dropdown-offset: 5px;
+  --lw-date-format-panel-date-time-format-list-offset-top: 15px; /* Format list */
+  --lw-date-format-panel-date-time-format-list-max-height: 400px;
+  --lw-date-format-panel-each-date-time-format-offset: 12px;
+  /* Date Time Picker */
+  --lw-date-time-picker-default-width: var(
+    --lw-editor-width
+  ); /* lwDateTimePicker default width */
+  --lw-date-time-picker-default-height: var(
+    --lw-editor-height
+  ); /* lwDateTimePicker default height */
+  --lw-date-time-picker-header-opacity: 0.8; /* Opacity of header elements */
+  --lw-date-time-picker-header-opacity-active: 1; /* Opacity of header elements when selected */
+  /*DockingLayout*/
+  --lw-docking-layout-default-width: 1000px; /* lwDropDownList, lwComboBox default width */
+  --lw-docking-layout-default-height: 800px; /* lwDropDownList, lwComboBox default height */
+  --lw-docking-layout-feedback-background-secondary-size: 7px; /* The size of the arrows of the advanced snapping highlighters that show possible drop position of the dragged item. */
+  /*DropDownList*/
+  --lw-drop-down-list-default-width: var(
+    --lw-editor-width
+  ); /* lwDropDownList, lwComboBox default width */
+  --lw-drop-down-list-default-height: var(
+    --lw-editor-height
+  ); /* lwDropDownList, lwComboBox default height */
+  --lw-drop-down-list-drop-down-width: initial; /* lwDropDownList drop down width */
+  --lw-drop-down-list-drop-down-height: auto; /* lwDropDownList drop down height */
+  /* DropDownButton */
+  --lw-drop-down-button-default-width: auto; /* lwDropDownButton default width */
+  --lw-drop-down-button-default-height: var(
+    --lw-editor-height
+  ); /* lwDropDownButton default height */
+  --lw-drop-down-button-drop-down-width: var(
+    --lw-editor-drop-down-width
+  ); /* lwDropDownButton drop down width */
+  --lw-drop-down-button-drop-down-height: var(
+    --lw-editor-drop-down-height
+  ); /* lwDropDownButton drop down height */
+  /* Filter Builder */
+  --lw-filter-builder-default-width: var(
+    --lw-box-width
+  ); /* Default width of the lwFilterBuilder*/
+  --lw-filter-builder-default-height: var(
+    --lw-box-height
+  ); /* Default height of the lwFilterBuilder*/
+  --lw-filter-builder-row-height: var(
+    --lw-editor-height
+  ); /* Default height of the lwFilterBuilder's rows*/
+  --lw-filter-builder-item-width: var(
+    --lw-editor-width
+  ); /* Default width of the lwFilterBuilder's button items*/
+  --lw-filter-builder-group-container-border: 4px;
+  --lw-filter-builder-item-margin: 20px;
+  --lw-filter-builder-group-condition-margin: 5px;
+  --lw-filter-builder-group-margin: 15px;
+  /* Filter Panel */
+  --lw-filter-panel-default-width: 300px; /* Default width of the lwFilterPanel */
+  --lw-filter-panel-default-height: auto; /* Default height of the lwFilterPanel */
+  --lw-filter-panel-padding: 10px; /* padding of the lwFilterPanel */
+  --lw-filter-panel-border-top-right-radius: var(
+    --lw-border-radius
+  ); /* lwFilterPanel top-right border radius */
+  --lw-filter-panel-border-top-left-radius: var(
+    --lw-border-radius
+  ); /* lwFilterPanel top-left border radius */
+  --lw-filter-panel-border-bottom-left-radius: var(
+    --lw-border-radius
+  ); /* lwFilterPanel bottom-left border radius */
+  --lw-filter-panel-border-bottom-right-radius: var(
+    --lw-border-radius
+  ); /* lwFilterPanel bottom-right border radius */
+  --lw-filter-panel-border-width: var(
+    --lw-border-width
+  ); /* lwFilterPanel border width */
+  --lw-filter-panel-border: var(--lw-border); /* lwFilterPanel border color */
+  --lw-filter-panel-background: var(
+    --lw-background
+  ); /* lwFilterPanel background color */
+  --lw-filter-panel-color: var(
+    --lw-background-color
+  ); /* lwFilterPanel text color */
+  --lw-filter-panel-vertical-offset: 10px; /* Vertical offset between lwFilterPanel sub-elements */
+  --lw-filter-panel-main-element-height: 400px; /* height of the lwTree inside the lwFilterPanel */
+  /* File Upload */
+  --lw-file-upload-default-width: var(
+    --lw-editor-width
+  ); /* Default width of the lwFileUpload*/
+  --lw-file-upload-browse-button-width: auto; /* Default width of the browse button*/
+  --lw-file-upload-browse-button-height: auto; /* Default height of the browse button*/
+  --lw-file-upload-footer-button-width: auto; /* Default height of the lwFileUpload's footer buttons*/
+  --lw-file-upload-footer-button-height: auto; /* Default height of the lwFileUpload's footer buttons*/
+  --lw-file-upload-text-content-uploading-start: "Connecting ..."; /* Default text content of the pseudo element shown when upload starts. */
+  --lw-file-upload-text-content-uploading: "Uploading ..."; /* Default text content of the pseudo element shown during the upload. */
+  --lw-file-upload-text-content-error: "Upload error!"; /* Default text content of the pseudo element shown on error. */
+  --lw-file-upload-text-content-pause: "Upload paused!"; /* Default text content of the pseudo element shown when upload is paused. */
+  --lw-file-upload-text-content-drop-zone: "Drag files here"; /* Default text content of the pseudo element shown where is the drop zone. */
+  --lw-file-upload-text-content-drop-zone-over: "Drop here \e824"; /* Default text content of the pseudo element shown when dragged files are over the drop zone. */
+  --lw-file-upload-container-min-height: 60px; /* Sets minimmum height of the drop zone and file zone containers. */
+  --lw-file-upload-total-files-min-height: 20px; /* Sets min height of the container where total numbers of items is displayed. */
+  /* Gantt Chart */
+  --lw-gantt-chart-splitter-bar-fit-size: calc(
+    var(--lw-gantt-chart-task-timeline-content-height) + 2 *
+      var(--lw-gantt-chart-task-default-height)
+  ); /* The fit size of all Splitter bars inside the element*/
+  --lw-gantt-chart-task-tree-splitter-bar-fit-size: var(
+    --lw-gantt-chart-splitter-bar-fit-size
+  ); /* The fit size of the Splitter Bars that are inside the Task Tree Splitter */
+  --lw-gantt-chart-resource-tree-splitter-bar-fit-size: calc(
+    var(--lw-gantt-chart-resource-timeline-content-height) +
+      var(--lw-gantt-chart-task-default-height)
+  ); /* The fit size of the Splitter Bars that are inside the Resource Tree Splitter */
+  --lw-gantt-chart-task-default-height: 30px; /* The height of a Task inside the Timeline */
+  --lw-gantt-chart-header-height: var(
+    --lw-gantt-chart-task-default-height
+  ); /* The height of the header of the Task and Resource Panels */
+  --lw-gantt-chart-task-bar-fill-padding: 5px; /* The padding of the Fill of the Task Bar */
+  --lw-gantt-chart-task-label-padding: var(
+    --lw-gantt-chart-task-bar-fill-padding
+  ); /* */
+  --lw-gantt-chart-task-thumb-color: rgba(
+    0,
+    0,
+    0,
+    0.55
+  ); /* The color of the thumb */
+  --lw-gantt-chart-task-progress-color: rgba(
+    0,
+    0,
+    0,
+    0.15
+  ); /* #2d75f5 */ /* The default color of the progress fill of all Tasks inside the Timeline */
+  --lw-gantt-chart-project-color: #ffa558; /* #38a238*/ /* The defaut color for all Project tasks */
+  --lw-gantt-chart-project-label-color: #333; /* Determines the label color of the project tasks inside the Timeline. */
+  --lw-gantt-chart-project-label-color-selected: #000; /* Determines the label color of the project tasks inside the Timeline when selected. */
+  --lw-gantt-chart-project-progress-color: var(
+    --lw-gantt-chart-task-progress-color
+  ); /* #008000 */ /* The default color of the progress fill for all Project tasks */
+  --lw-gantt-chart-task-color: rgb(
+    43,
+    195,
+    190
+  ); /* #6495ed */ /* The default color of a Task inside the Timeline */
+  --lw-gantt-chart-milestone-color: #800080; /* The default color for all Milestones */
+  --lw-gantt-chart-timeline-task-background-color: transparent; /* Determines the background color of the tasks(rows) inside the Timeline. */
+  --lw-gantt-chart-timeline-task-connection-feedback-color: #e6510a; /* orange */ /* Determines the default color of the feedback that is shows when creating a connection between tasks inside the Timeline. */
+  --lw-gantt-chart-timeline-task-connection-feedback-width: 1px; /* Determines the default width of the feedback that is shows when creating a connection between tasks inside the Timeline. */
+  --lw-gantt-chart-timeline-task-connection-feedback-style: dashed; /* Determines the style of the feedback that is shows when creating a connection between tasks inside the Timeline. */
+  --lw-gantt-chart-timeline-task-connection-color: var(
+    --lw-gantt-chart-timeline-task-connection-feedback-color
+  ); /* Determines the color of the connections between Tasks inside the Timeline. */
+  --lw-gantt-chart-timeline-task-connection-color-hover: var(
+    --lw-gantt-chart-timeline-task-connection-color
+  ); /* Determines the color on hover of the connections between Tasks inside the Timeline. */
+  --lw-gantt-chart-timeline-task-connection-width: var(
+    --lw-gantt-chart-timeline-task-connection-feedback-width
+  ); /* Determines the width of the connections between the tasks inside the Timeline. */
+  --lw-gantt-chart-timeline-task-connection-style: solid; /* Determines the style of the connections between the tasks inside the Timeline. */
+  --lw-gantt-chart-timeline-task-connection-arrow-type: solid; /* Determines the border type of the arrow of the connections between Tasks inside the Timeline. */
+  --lw-gantt-chart-timeline-task-connection-arrow-width: 5px; /* Determines the width of the arrow of the connections between Tasks inside the Timeline. */
+  --lw-gantt-chart-timeline-task-resize-indicator-width: 4px; /* Determines the defualt width of the resize indicator of the Task bars inside the Timeline. */
+  --lw-gantt-chart-timeline-task-resize-indicator-color: #fff; /* Determines the background-color of the resize indicators of the Task bars insinde the Timeline. */
+  --lw-gantt-chart-timeline-task-resize-indicator-border-color: #333; /* Determines the border-color of the resize indicator of the Task bars inside the Timeline. */
+  --lw-gantt-chart-timeline-task-progress-thumb-size: 10px; /* Determines the size of the thumb controlling the progress of a Task inside the Timeline. */
+  --lw-gantt-chart-timeline-cell-size: auto; /* Determines the default width of the cells inside the Timeline. */
+  --lw-gantt-chart-timeline-cell-min-size: 70px; /* Determines the default min-width of the cells inside the Timeline. */
+  --lw-gantt-chart-timeline-task-min-width: 5px; /* Determines the default min-width of the Tasks insinde the Timeline. Not applicable to Milestone tasks. */
+  --lw-gantt-chart-timeline-weekend-color: #eff5fd; /* Determines the default background color of the 'weekend' cells insinde the Timeline. */
+  --lw-gantt-chart-timeline-nonworking-color: #f5f5f5; /* Determines the default background-color of the nonworking days/hours inside the Timeline. */
+  --lw-gantt-chart-default-width: auto; /* Determines the default width of the element. */
+  --lw-gantt-chart-default-height: 600px; /* Determines the height of the element. */
+  --lw-gantt-chart-task-popup-window-default-width: 500px; /* Determines the width of the task editing popup windows of the element. */
+  --lw-gantt-chart-connection-popup-window-default-width: 300px; /* Determines the width of the connection editing popup windows of the element. */
+  --lw-gantt-chart-confirm-popup-window-default-width: var(
+    --lw-gantt-chart-connection-popup-default-width
+  ); /* Determines the width of the confirm popup window of the element. */
+  --lw-gantt-chart-popup-window-header-height: 35px; /* Determines the height of the header of the popup windows inside the element. */
+  --lw-gantt-chart-popup-window-footer-height: 50px; /* Determines the height of the footer of the popup windows insinde the element. */
+  --lw-gantt-chart-header-placeholder: " - "; /* Placeholder for thea Header sections when there're no items */
+  --lw-gantt-chart-progress-label-padding: 0 10px 0 10px; /* Task progress label padding */
+  --lw-gantt-chart-header-box-shadow: initial; /* Sets a box shadow to the Task Timeline header */
+  /* Gauge */
+  --lw-gauge-default-width: var(--lw-box-width); /* lwGauge default width */
+  --lw-gauge-default-height: var(--lw-box-height); /* lwgauge default height */
+  --lw-gauge-track-border: var(--lw-border); /* Track's border color */
+  --lw-gauge-track-background: var(
+    --lw-background
+  ); /* Track's background color */
+  --lw-gauge-needle-background: var(
+    --lw-primary
+  ); /* Needle's background color */
+  --lw-gauge-label-fill-state: initial; /* Fill color of labels */
+  --lw-gauge-label-stroke: initial; /* Stroke color of labels */
+  /* Grid */
+  --lw-grid-default-width: 800px; /* Used to set the default width. */
+  --lw-grid-default-height: 400px; /* Used to set the default height. */
+  --lw-grid-footer-height: var(--lw-bar-height); /* Sets footer height. */
+  --lw-grid-header-height: var(--lw-bar-height); /* Sets header height. */
+  --lw-grid-group-header-height: var(
+    --lw-bar-height
+  ); /* Sets group header height. */
+  --lw-grid-row-height: 30px; /* Sets rows height. */
+  --lw-grid-column-header-height: var(
+    --lw-bar-height
+  ); /* Sets columns height. */
+  --lw-grid-filter-footer-height: var(
+    --lw-bar-height
+  ); /* Sets filter row height. */
+  --lw-grid-aggregate-footer-height: var(
+    --lw-bar-height
+  ); /* Sets aggregates height. */
+  --lw-grid-header-background-freeze: var(
+    --lw-surface
+  ); /* Sets row/column header background, when row/column is frozen. */
+  --lw-grid-header-color-freeze: var(
+    --lw-surface-color
+  ); /* Sets row/column header text color, when row/column is frozen. */
+  --lw-grid-column-menu-width: 200px; /* Sets column menu's width. */
+  --lw-grid-column-menu-height: auto; /* Sets column menu's height. */
+  --lw-grid-column-buttons-width: 23px; /* Sets column buttons width. */
+  --lw-grid-cell-color-freeze: var(
+    --lw-surface-color
+  ); /* Sets text color of cells, when row/column is frozen. */
+  --lw-grid-cell-background-freeze: var(
+    --lw-surface
+  ); /* Sets background color of cells, when row/column is frozen */
+  --lw-grid-cell-color-delete: #333; /* Sets text color of cells, when row is deleted. */
+  --lw-grid-cell-background-delete: #ffdcdc; /* Sets background color of cells, when row is deleted. */
+  --lw-grid-cell-color-update: #333; /* Sets text color of cells, when cell is updated.. */
+  --lw-grid-cell-background-update: #d7f9c7; /* Sets background color of cells, when cell is updated.. */
+  --lw-grid-cell-color-add: #333; /* Sets text color of cells, when row is added.. */
+  --lw-grid-cell-background-add: #fed59b; /* Sets background color of cells, when row is deleted.. */
+  --lw-grid-cell-color-unbound: var(
+    --lw-surface-color
+  ); /* Sets text color of cells, when row is unbound. */
+  --lw-grid-cell-background-unbound: var(
+    --lw-surface
+  ); /* Sets background color of cells, when row is unbound. */
+  --lw-grid-cell-color-sort: var(
+    --lw-surface-color
+  ); /* Sets text color of cells, when column is sorted. */
+  --lw-grid-cell-background-sort: var(
+    --lw-surface
+  ); /* Sets background color of cells, when column is sorted. */
+  --lw-grid-cell-color-filter: var(
+    --lw-surface-color
+  ); /* Sets text color of cells, when column is filtered. */
+  --lw-grid-cell-background-filter: var(
+    --lw-surface
+  ); /* Sets background color of cells, when column is filtered. */
+  --lw-grid-group-row-vertical-offset: 5; /* Sets grouped rows vertical offset. */
+  --lw-grid-group-row-horizontal-offset: 1; /* Sets grouped rows horizontal offset. */
+  --lw-grid-template-columns: none; /* Sets Template columns. */
+  --lw-grid-column-gap: 0px; /* Sets the element's grid-column-gap (related to CSS Grid) */
+  --lw-grid-row-gap: 0px; /* Sets the element's grid-row-gap (related to CSS Grid) */
+  --lw-grid-freeze-splitter-size: 1px; /* Sets frozen split bar size. */
+  --lw-grid-resize-line-size: 1px; /* Sets resize line size. */
+  /* Grid Layout */
+  --lw-grid-layout-col-gap: 10px;
+  --lw-grid-layout-row-gap: 10px;
+  --lw-grid-layout-width: 100%;
+  --lw-grid-layout-rows: none;
+  /* Group Panel, Sort Panel, Column Panel, Multi Column Filter Panel */
+  --lw-grid-panel-default-width: 450px; /* Default width of the lwGroupPanel/lwSortPanel/lwColumnPanel/lwMultiColumnFilterPanel */
+  --lw-grid-panel-default-height: auto; /* Default height of the lwGroupPanel/lwSortPanel/lwColumnPanel/lwMultiColumnFilterPanel */
+  --lw-grid-panel-padding: 10px; /* padding of the lwGroupPanel/lwSortPanel/lwColumnPanel/lwMultiColumnFilterPanel */
+  --lw-grid-panel-vertical-offset: 10px; /* Vertical offset between lwGroupPanel/lwSortPanel/lwColumnPanel/lwMultiColumnFilterPanel items */
+  --lw-grid-panel-item-height: 30px; /* height of lwGroupPanel/lwSortPanel/lwColumnPanel/lwMultiColumnFilterPanel items */
+  --lw-multi-column-filter-panel-template-columns: 15px 60px 2fr 3fr 3fr; /* lwMultiColumnFilterPanel grid-template-columns */
+  /* Kanban */
+  --lw-kanban-default-width: 1200px; /* Default width of Kanban */
+  --lw-kanban-default-height: 500px; /* Default height of Kanban */
+  --lw-kanban-header-size: 35px; /* Header size of Kanban (applies to header and column headers) */
+  --lw-kanban-task-min-width: 150px; /* Min width for Kanban tasks in columns with horizontal orientation */
+  --lw-kanban-task-min-height: 80px; /* Kanban task min height */
+  --lw-kanban-text-max-height: 200px; /* Kanban task text part max height */
+  --lw-kanban-user-icon-size: 30px; /* Kanban user icon size */
+  --lw-kanban-user-list-width: 150px; /* Kanban user list width */
+  --lw-kanban-user-list-max-height: 400px; /* Kanban user list max height */
+  --lw-kanban-comments-list-width: 350px; /* Kanban comments list width */
+  --lw-kanban-comments-list-height: 400px; /* Kanban comments list height */
+  --lw-kanban-new-comment-height: 50px; /* Height of new comment section */
+  --lw-kanban-new-comment-height-expanded: 175px; /* Expanded height of new comment section */
+  --lw-kanban-send-button-height: 30px; /* Height of Send button in new comment section */
+  --lw-kanban-color-band-width: 3px; /* Kanban color band width (i.e. left border of tasks) */
+  /* ListBox */
+  --lw-list-box-default-width: var(
+    --lw-editor-width
+  ); /* lwListBox default width */
+  --lw-list-box-default-height: var(
+    --lw-editor-width
+  ); /* lwListBox default height */
+  --lw-list-item-group-header-text-transform: uppercase; /* lwListBox item group header text transform */
+  --lw-list-item-horizontal-offset: 3px; /* Defines list item's horizontal offset. */
+  --lw-list-item-vertical-offset: 3px; /* Defines list item's vertical offset. */
+  --lw-list-item-height: 36px; /* lwListBox item height */
+  --lw-list-item-check-box-radius: 2px; /* lwListBox checkbox radius */
+  --lw-list-item-label-padding: 0; /* lwListBox item label padding */
+  --lw-list-item-label-border-radius: 0; /* lwListBox item label border radius */
+  /* Loader */
+  --lw-loader-size: var(
+    --lw-editor-height
+  ); /* lwListBox loader size(width=height) */
+  /* LED */
+  --lw-led-default-width: var(--lw-editor-height); /* lwLed default width */
+  --lw-led-default-height: var(--lw-editor-height); /* lwLed default height */
+  /* List Menu */
+  --lw-list-menu-default-width: var(
+    --lw-box-width
+  ); /* lwListMenu default width */
+  --lw-list-menu-default-height: var(
+    --lw-box-height
+  ); /* lwListMenu default height */
+  --lw-list-menu-filter-input-vertical-offset: 5px; /* Defines vertical offset of the ListMenu's filter input. */
+  --lw-list-menu-filter-input-horizontal-offset: 5px; /* Defines horizontal offset of the ListMenu's filter input. */
+  /*Masked Text Box*/
+  --lw-masked-text-box-default-width: var(
+    --lw-editor-width
+  ); /* lwMasked default width */
+  --lw-masked-text-box-default-height: var(
+    --lw-editor-height
+  ); /* lwMasked default height */
+  /* Menu */
+  --lw-menu-default-width: var(--lw-bar-width); /* lwMenu default width */
+  --lw-menu-default-height: var(--lw-bar-height); /* lwMenu default height */
+  --lw-menu-vertical-default-width: calc(
+    var(--lw-bar-width) / 2
+  ); /* vertical and context lwMenu default width */
+  --lw-menu-vertical-default-height: var(
+    --lw-bar-width
+  ); /* vertical and context lwMenu default height */
+  --lw-menu-scroll-button-size: calc(
+    var(--lw-bar-height) / 1.5
+  ); /* lwMenu scroll buttons size. Horizontal Menu scroll buttons width = Vertical Menu scroll buttons height. */
+  /* Multiline Text Box */
+  --lw-multiline-text-box-default-width: var(
+    --lw-editor-width
+  ); /* Default width of the element. */
+  --lw-multiline-text-box-default-height: calc(
+    10 * var(--lw-editor-height)
+  ); /* Default height of the element. */
+  /* Multi Split Button*/
+  --lw-multi-split-button-default-width: var(
+    --lw-editor-width
+  ); /* Element's default width. */
+  --lw-multi-split-button-default-height: var(
+    --lw-editor-height
+  ); /* Element's default height. */
+  /* Number format Panel */
+  --lw-number-format-panel-selected-format-width: 1fr;
+  --lw-number-format-panel-apply-button-width: 125px;
+  --lw-number-format-panel-header-holder-offset: 10px;
+  --lw-number-format-panel-border-size: 1px;
+  --lw-number-format-panel-border-color: #ccc;
+  --lw-number-format-panel-border-radius: 4px;
+  --lw-number-format-panel-sample-container-vertical-offset: 15px;
+  --lw-number-format-panel-sample-container-horizontal-offset: 5px;
+  --lw-number-format-panel-formats-list-margin-top: 15px;
+  --lw-number-format-panel-formats-list-max-height: 400px;
+  --lw-number-format-panel-formats-item-padding: 12px;
+  --lw-number-format-panel-selected-format-padding-left: 5px;
+  --lw-number-format-panel-selected-format-padding-top: 3px;
+  --lw-number-format-panel-selected-format-padding-bottom: 3px;
+  --lw-number-format-panel-header-input-width: 100%;
+  --lw-number-format-panel-formats-item-left-padding: 10px;
+  --lw-number-format-panel-formats-item-hover-background: #f1f1f1;
+  --lw-number-format-panel-formats-item-example-format-color: #777;
+  /* Numeric Text Box */
+  --lw-numeric-text-box-default-width: var(
+    --lw-editor-width
+  ); /* lwNumericTextBox default width */
+  --lw-numeric-text-box-default-height: var(
+    --lw-editor-height
+  ); /* lwNumericTextBox default height */
+  --lw-numeric-text-box-default-radix-display-width: 12%; /* lwNumericTextBox default radix display button width*/
+  --lw-numeric-text-box-default-unit-display-width: var(
+    --lw-editor-addon-width
+  ); /* lwNumericTextBox default unit display width*/
+  --lw-numeric-text-box-text-align: right; /* lwNumericTextBox input text align */
+  /* Path */
+  --lw-path-default-width: var(--lw-editor-width); /* lwPath default width */
+  --lw-path-default-height: var(--lw-editor-height); /* lwPath default height */
+  --lw-path-drop-down-width: auto; /* lwPath drop down width */
+  --lw-path-drop-down-height: auto; /* lwPath drop down height */
+  --lw-path-button-gap: 5px; /* lwPath button gap */
+  --lw-path-text-align: start; /* lwPath text align */
+  /* Power Button */
+  --lw-power-button-default-width: var(
+    --lw-editor-height
+  ); /* lwPowerButton default width */
+  --lw-power-button-default-height: var(
+    --lw-editor-height
+  ); /* lwPowerButton default height */
+  /* Progress Bar */
+  --lw-progress-bar-default-width: var(
+    --lw-editor-width
+  ); /* lwProgressBar default width */
+  --lw-progress-bar-default-height: var(
+    --lw-editor-height
+  ); /* lwProgressBar default height */
+  --lw-circular-progress-bar-default-size: var(
+    --lw-editor-width
+  ); /* lwCircularProgressBar default size (width = height) */
+  --lw-circular-progress-bar-fill-size: 20%; /* lwCircularProgressBar ui-state size. The width of the ui-state. The middle container's width is calculated defaultd on this value. */
+  /* Query Builder */
+  --lw-query-builder-default-width: auto; /* Default width of QueryBuilder. */
+  --lw-query-builder-default-height: auto; /* Default height of QueryBuilder. */
+  --lw-query-builder-min-width: 100px; /* Minimum width of QueryBuilder. */
+  --lw-query-builder-content-padding: 5px; /* Padding of QueryBuilder. */
+  --lw-query-builder-editor-width: 125px; /* Width of editors in QueryBuilder. */
+  /* Radio Button */
+  --lw-radio-button-default-size: calc(
+    1px + 1 / 2 * var(--lw-editor-height)
+  ); /* Default size for the radio button. */
+  /* Sortable */
+  --lw-sortable-handle-size: 25px; /* lwSortable handle size */
+  /* Splitter */
+  --lw-splitter-default-width: var(
+    --lw-box-width
+  ); /* lwSplitter default width */
+  --lw-splitter-default-height: var(
+    --lw-box-height
+  ); /* lwSplitter default height */
+  --lw-splitter-bar-size: 10px; /* The width of the scrollbar when vertical and the height of the scrollbar when horizontal*/
+  --lw-splitter-bar-fit-size: 100%; /* The size of the splitter according to the orientation of the Splitter. By 'default' a SplitterBar fits the size of the Splitter. */
+  --lw-splitter-item-padding: 0; /* Splitter item padding */
+  --lw-splitter-item-content-padding: 0; /* Splitter item content padding */
+  --lw-splitter-item-size: auto; /* The default size of the Splitter Items */
+  /* Switch Button */
+  --lw-switch-button-default-width: calc(
+    var(--lw-editor-height) + 10px
+  ); /* Default width of the SwitchButton. */
+  --lw-switch-button-default-height: var(
+    --lw-editor-height
+  ); /* lwSwitchButton default height */
+  --lw-switch-button-thumb-size: calc(
+    var(--lw-switch-button-default-height) - 8px
+  ); /* lwSwitchButton thumb size */
+  /* Slider */
+  --lw-slider-default-width: var(
+    --lw-editor-width
+  ); /* lwSlider default width */
+  --lw-slider-default-height: 35px; /* lwSlider default height*/
+  --lw-slider-track-size: 1px; /* lwSlider track size. Horizontal track height = Vertical track width */
+  --lw-slider-thumb-width: 20px; /* lwSlider thumb width*/
+  --lw-slider-thumb-height: 20px; /* lwSlider thumb height*/
+  --lw-slider-tooltip-width: 60px; /* lwSlider tooltip width */
+  --lw-slider-tooltip-height: 30px; /* lwSlider tooltip height*/
+  --lw-slider-spin-button-width: 30px; /* lwSlider spin buttons width*/
+  --lw-slider-spin-button-height: 30px; /* lwSlider spin buttons height*/
+  --lw-slider-tick-size: 10px; /* lwSlider tick size. Horizontal Slider tick height = Vertical Slider tick width.*/
+  --lw-slider-minor-tick-size: 5px; /* lwSlider minor tick size. Horizontal Slider minor tick height = Vertical Slider minor tick width.*/
+  --lw-slider-thumb-border-top-right-radius: 15px; /* Top-right border radius of lwSlider thumb */
+  --lw-slider-thumb-border-top-left-radius: 15px; /* Top-left border radius of lwSlider thumb */
+  --lw-slider-thumb-border-bottom-left-radius: 15px; /* Bottom-left border radius of lwSlider thumb */
+  --lw-slider-thumb-border-bottom-right-radius: 15px; /* Bottom-right border radius of lwSlider thumb */
+  /* ScrollBar */
+  --lw-scroll-button-size: 16px; /* lwScrollBar buttons size. Horizontal ScrollBar button width = Vertical ScrollBar button height. ScrollBar track is calculated defaultd on this value. */
+  --lw-scroll-bar-size: 18px; /* Default scrollbar size */
+  --lw-scroll-bar-default-width: var(
+    --lw-editor-width
+  ); /* ScrollBar's default width. */
+  --lw-scroll-bar-default-height: var(
+    --lw-scroll-bar-size
+  ); /* ScrollBar's default height. */
+  --lw-scroll-bar-background: #f1f1f1; /* Default ScrollBar's background color. */
+  --lw-scroll-bar-border: #f1f1f1; /* The border color of the ScrollBar */
+  --lw-scroll-bar-thumb-border-top-right-radius: 0px; /* Default ScrollBar's top-right border radius. */
+  --lw-scroll-bar-thumb-border-top-left-radius: 0px; /* Default ScrollBar's top-left border radius. */
+  --lw-scroll-bar-thumb-border-bottom-left-radius: 0px; /* Default ScrollBar's bottom-left border radius. */
+  --lw-scroll-bar-thumb-border-bottom-right-radius: 0px; /* Default ScrollBar's bottom-right border radius. */
+  --lw-scroll-bar-thumb-background: #c1c1c1; /* The color of the ScrollBar's thumb. */
+  --lw-scroll-bar-thumb-border: #c1c1c1; /* The color of the ScrollBar's thumb border. */
+  --lw-scroll-bar-thumb-background-hover: #a8a8a8; /* The background color of the ScrollBar's thumb in hover state. */
+  --lw-scroll-bar-thumb-border-hover: #a8a8a8; /* The border color of the ScrollBar's thumb in hover state. */
+  --lw-scroll-bar-thumb-background-active: #787878; /* The background color of the ScrollBar's thumb in active state. */
+  --lw-scroll-bar-thumb-border-active: #787878; /* The border color of the ScrollBar's thumb in active state. */
+  --lw-scroll-bar-button-background: #f1f1f1; /* The background color of ScrollBar's navigation buttons. */
+  --lw-scroll-bar-button-border: #f1f1f1; /* The border color of ScrollBar's navigation buttons. */
+  --lw-scroll-bar-button-color: #505050; /* The color of ScrollBar's navigation buttons. */
+  --lw-scroll-bar-button-background-hover: #d2d2d2; /* The background color of the hovered ScrollBar's buttons. */
+  --lw-scroll-bar-button-border-hover: #f1f1f1; /* The border color of the hovered ScrollBar's buttons. */
+  --lw-scroll-bar-button-color-hover: #505050; /* The color of the hovered ScrollBar's buttons. */
+  --lw-scroll-bar-button-background-active: #787878; /* The background color of the ScrollBar's buttons in active state. */
+  --lw-scroll-bar-button-border-active: #f1f1f1; /* The border color of the ScrollBar's buttons in active state. */
+  --lw-scroll-bar-button-color-active: #fff; /* The color of the ScrollBar's buttons in active state. */
+  /* Table */
+  --lw-table-default-width: 100%; /* lwTable default width */
+  --lw-table-default-height: auto; /* lwTable default height */
+  --lw-table-header-footer-height: 56px; /* lwTable height of header and footer */
+  --lw-table-column-header-height: var(
+    --lw-table-header-footer-height
+  ); /* lwTable height of column header */
+  --lw-table-row-height: 48px; /* lwTable height of rows */
+  --lw-table-cell-padding: 12px; /* lwTable cell padding */
+  --lw-table-indent: 30px; /* lwTable hierarchical cell indent */
+  --lw-table-arrow-size: 16px; /* lwTable arrow size */
+  --lw-table-arrow-margin: 5px; /* lwTable arrow margin */
+  /* Tank */
+  --lw-tank-default-width: var(--lw-editor-width); /* lwTank default width */
+  --lw-tank-default-height: calc(
+    10 * var(--lw-editor-height)
+  ); /* lwTank default height*/
+  --lw-tank-scale-size: 105px; /* lwTank scale size*/
+  --lw-tank-thumb-width: 25px; /* lwTank thumb width*/
+  --lw-tank-thumb-height: var(--lw-tank-thumb-width); /* lwTank thumb height*/
+  --lw-tank-tooltip-width: 80px; /* lwTank tooltip width*/
+  --lw-tank-tooltip-height: 30px; /* lwTank thumb height*/
+  --lw-tank-tick-size: 10px; /* lwTank tick size. Horizontal Tank tick height = Vertical Tank tick width. */
+  --lw-tank-minor-tick-size: 5px; /* lwTank minor tick size. */
+  --lw-tank-minimum-track-size: 6px; /* lwTank horizontal track min-height, vertical track min-width */
+  /* Tabs */
+  --lw-tabs-header-button-size: 20px; /* lwTabs header buttons size. Horizontal Tabs header buttons width = Vertical Tab header buttons height. */
+  --lw-tabs-animation-duration: 0.5s; /* lwTabs animation duration */
+  --lw-tabs-default-width: var(--lw-box-width); /* lwTabs default width */
+  --lw-tabs-default-height: var(--lw-box-height); /* lwTabs default height */
+  --lw-tabs-header-padding: 0px; /* Defines Tabs header padding. */
+  --lw-tabs-header-offset: 0px; /* Defines Tabs header offset. */
+  --lw-tab-item-padding: 12px 16px; /* Defines vertical and horizontal padding of tab items. */
+  --lw-tab-item-offset: 5px; /* Default tab item offset. */
+  --lw-tab-item-initial-offset: 5px; /* Initial tab item offset. */
+  --lw-tab-item-text-transform: uppercase; /* Tab item text capitalization. */
+  /* Time Picker */
+  --lw-time-picker-default-width: var(
+    --lw-editor-width
+  ); /* lwTimePicker default width */
+  --lw-time-picker-default-height: calc(
+    12 * var(--lw-editor-height)
+  ); /* lwTimePicker default height */
+  /* Tooltip */
+  --lw-tooltip-arrow-width: 6px; /* Default lwTooltip arrow width */
+  --lw-tooltip-arrow-color: var(--lw-secondary); /* lwTooltip arrow color */
+  --lw-tooltip-arrow-translate: 0; /* lwTooltip arrow translation (transformation) */
+  --lw-tooltip-padding: 4px 8px; /* lwTooltip padding */
+  --lw-tooltip-content-shadow: none; /* lwTooltip content box-shadow */
+  /* Toast */
+  --lw-toast-item-icon: ""; /* Code of toast item icon */
+  --lw-toast-container-default-width: var(
+    --lw-bar-width
+  ); /* Default width of the lwToast's containers, positioned top-left, top-right, bottom-left, bottom-right */
+  --lw-toast-header-height: 20px; /* lwToast header height */
+  --lw-toast-info-background: #5bc0de; /* Background color for type info */
+  --lw-toast-info-color: #fff; /* Text color for type info */
+  --lw-toast-warning-background: #f0ad4e; /* Background color for type warning */
+  --lw-toast-warning-color: #fff; /* Text color for type warning */
+  --lw-toast-error-background: var(
+    --lw-error
+  ); /* Background color for type error */
+  --lw-toast-error-color: var(--lw-error-color); /* Text color for type error */
+  --lw-toast-success-background: var(
+    --lw-success
+  ); /* Background color for type success */
+  --lw-toast-success-color: var(
+    --lw-success-color
+  ); /* Text color for type success */
+  /* Tree */
+  --lw-tree-default-width: var(--lw-box-width); /* lwTree default width */
+  --lw-tree-default-height: var(--lw-box-height); /* lwTree default height */
+  --lw-tree-scroll-button-size: 20px; /* lwTree scroll buttons size */
+  --lw-tree-lines-style: dashed; /* Default style of the connecting tree lines. */
+  --lw-tree-indent: 16px; /* Defines the indent(hierarchy offset) size of the tree items. */
+  --lw-tree-lines-color: var(
+    --lw-border
+  ); /* Defines the color of the connecting lines. */
+  --lw-tree-lines-width: 1px; /* Defines the width of the connecting lines. */
+  --lw-tree-item-label-height: 36px; /* Defines the height of tree item labels. */
+  --lw-tree-item-padding: 9px 12px; /* Defines the padding of the tree items. */
+  --lw-tree-item-vertical-offset: 3px; /* Defines the vertical offset of the tree items. */
+  --lw-tree-item-horizontal-offset: 3px; /* Defines the horizontal offset of the tree items. */
+  /* Text Box */
+  --lw-text-box-default-width: var(
+    --lw-editor-width
+  ); /* Text Box default width. */
+  --lw-text-box-default-height: var(
+    --lw-editor-height
+  ); /* Text Box default height. */
+  /* Validation panel */
+  --lw-validation-panel-description-width: 20%;
+  --lw-validation-panel-content-width: 80%;
+  /* Validation panel - appearance */
+  --lw-validation-panel-appearance-vertical-offset: 10px;
+  --lw-validation-panel-appearance-reset-button-left-offset: 5px;
+  --lw-validation-panel-appearance-textbox-vertical-offset: 5px;
+  --lw-validation-panel-appearance-reset-button-color: var(--lw-primary);
+  /* Validation panel - Criteria container */
+  --lw-validation-panel-criteria-row-margin-top: 10px;
+  --lw-validation-panel-criteria-container-vertical-offset: 10px;
+  --lw-validation-panel-criteria-container-input-width: 180px;
+  --lw-validation-panel-criteria-container-input-horizontal-offset: 2px;
+  --lw-validation-panel-criteria-container-textbox-width: 80px;
+  --lw-validation-panel-criteria-container-textbox-horizontal-offset: 2px;
+  --lw-validation-panel-criteria-container-text-between-inputs-offset: 5px;
+  /* Validation panel - Invalid data */
+  --lw-validation-panel-invalid-data-vertical-offset: 10px;
+  /* Validation panel - Footer */
+  --lw-validation-panel-footer-button-color: #188038;
+  --lw-validation-panel-footer-button-background: white;
+  --lw-validation-panel-footer-vertical-offset: 20px;
+  --lw-validation-panel-footer-button-horizontal-offset: 5px;
+  --lw-validation-panel-footer-remove-validation-button-color: var(
+    --lw-validation-panel-footer-button-color
+  );
+  --lw-validation-panel-footer-cancel-button-color: var(
+    --lw-validation-panel-footer-button-color
+  );
+  --lw-validation-panel-footer-save-button-color: var(
+    --lw-validation-panel-footer-button-background
+  );
+  --lw-validation-panel-footer-save-button-background: var(
+    --lw-validation-panel-footer-button-color
+  );
+  /*Password Text Box*/
+  --lw-password-text-box-default-width: var(
+    --lw-editor-width
+  ); /* lwPasswordTextBox default width */
+  --lw-password-text-box-default-height: var(
+    --lw-editor-height
+  ); /* lwPasswordTextBox default height */
+  /* Pager */
+  --lw-pager-default-width: var(--lw-bar-width); /* default pager width */
+  --lw-pager-default-height: var(--lw-bar-height); /* default pager height */
+  --lw-pager-button-width: "auto"; /* default pager button width */
+  --lw-pager-button-height: 32px; /* default pager button height */
+  --lw-pager-page-size-selector-width: 60px; /* Default page size selector width. */
+  --lw-pager-page-index-selector-width: 32px; /* default pager item width */
+  --lw-pager-page-index-selector-height: 32px; /* default pager item height */
+  --lw-pager-page-index-ellipsis-selector-width: 32px; /* default pager ellipsis width */
+  --lw-pager-page-index-ellipsis-selector-height: 32px; /* default pager ellipsis width */
+  --lw-pager-page-index-selector-horizontal-offset: 8px; /* default pager ellipsis width */
+  --lw-pager-padding: 2px; /* Default padding. */
+  --lw-pager-input-width: 50px; /* Default width of the pager input. */
+  /*ScrollViewer*/
+  --lw-scroll-viewer-min-width: none;
+  --lw-scroll-viewer-max-width: none;
+  --lw-scroll-viewer-min-height: none;
+  --lw-scroll-viewer-max-height: none;
+  /*Scheduler*/
+  --lw-scheduler-default-height: auto; /* lwScheduler default height */
+  --lw-scheduler-default-width: auto; /* lwScheduler default width */
+  --lw-scheduler-timeline-cell-width: auto; /* lwScheduler default timeline cell width  */
+  --lw-scheduler-timeline-cell-height: 30px; /* lwScheduler default timeline cell height  */
+  --lw-scheduler-timeline-cell-min-width: 70px; /* Determines the default min-width of the cells inside the Timeline. */
+  --lw-scheduler-timeline-cell-min-height: 35px; /* The height of a Appointments inside the Timeline */
+  --lw-scheduler-header-height: 50px; /* The height of the header of the Task and Resource Panels */
+  --lw-scheduler-footer-height: var(
+    --lw-scheduler-header-height
+  ); /* The height of the header of the Task and Resource Panels */
+  --lw-scheduler-header-box-shadow: initial; /* Sets a Box shadow to the Timeline header */
+  --lw-scheduler-header-padding: 10px; /* Sets a the padding for the header/footer */
+  /*Window*/
+  --lw-window-default-height: var(
+    --lw-box-height
+  ); /* lwWindow default height */
+  --lw-window-default-width: var(--lw-box-width); /* lwWindow default width */
+  --lw-window-header-height: var(--lw-bar-height); /* lwWindow header height */
+  --lw-window-footer-height: var(--lw-bar-height); /* lwWindow footer height */
+  --lw-window-min-width: 250px; /* lwWindow header width */
+  --lw-window-header-footer-padding: 10px; /* lwWindow header and footer padding */
+  /*Elevations*/
+  --lw-elevation-24: 0 24px 38px 3px rgba(0, 0, 0, 0.14),
+    0 9px 46px 8px rgba(0, 0, 0, 0.12), 0 11px 15px 0 rgba(0, 0, 0, 0.2);
+  --lw-elevation-16: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+    0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+  --lw-elevation-12: 0 12px 17px 2px rgba(0, 0, 0, 0.14),
+    0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px 0 rgba(0, 0, 0, 0.2);
+  --lw-elevation-8: 0 8px 10px 1px rgba(0, 0, 0, 0.14),
+    0 3px 14px 3px rgba(0, 0, 0, 0.12), 0 4px 15px 0 rgba(0, 0, 0, 0.2);
+  --lw-elevation-6: 0 6px 10px 0 rgba(0, 0, 0, 0.14),
+    0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+  --lw-elevation-4: 0 2px 4px 0 rgba(0, 0, 0, 0.14),
+    0 4px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+  --lw-elevation-2: 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  --lw-elevation-1: 0 0 2px 0 rgba(0, 0, 0, 0.14),
+    0 2px 2px 0 rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  --lw-elevation-0: none;
+  /* Breakpoints */
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  /*Misc*/
+  --pseudo-element-height: 0;
+}
+
+[theme="dark"] {
+  --lw-primary-rgb: 122, 202, 255;
+  --lw-primary: rgb(var(--lw-primary-rgb)); /* The theme primary color */
+  --lw-primary-color: #242424;
+  --lw-background: #242424; /* The theme background color. The background color appears behind scrollable content.*/
+  --lw-background-color: #fff; /* Text color on top of a background background */
+  --lw-surface: #333; /* The theme surface color. Surface colors affect surfaces of components, such as cards, sheets, and menus. */
+  --lw-surface-color: #fff; /* Text color on top of a surface surface */
+  --lw-disabled: #535353; /* The theme primary color in disabled state. */
+  --lw-disabled-color: #fff; /* Text color on top of a theme background in disabled state */
+  --lw-border: #464646; /* The theme background border color */
+  --lw-editor-selection: var(--lw-primary);
+  --lw-editor-selection-color: var(--lw-primary-color);
+  --lw-ui-state-hover: #444;
+  --lw-ui-state-color-hover: #fff;
+  --lw-ui-state-border-hover: #444;
+  --lw-ui-state-active: var(--lw-primary);
+  --lw-ui-state-color-active: var(--lw-primary-color);
+  --lw-ui-state-border-active: var(--lw-primary);
+  --lw-ui-state-focus: #555;
+  --lw-ui-state-color-focus: #fff;
+  --lw-ui-state-border-focus: #555;
+  --lw-ui-state-selected: rgba(var(--lw-primary-rgb), 0.1);
+  --lw-ui-state-color-selected: var(--lw-primary);
+  --lw-ui-state-border-selected: rgba(var(--lw-primary-rgb), 0.1);
+  --lw-alternation-index0-color: var(
+    --lw-surface-color
+  ); /* Alternation color for index0 */
+  --lw-alternation-index0-border: var(
+    --lw-surface
+  ); /* Alternation border color for index0 */
+  --lw-alternation-index0-background: var(
+    --lw-surface
+  ); /* Alternation background color for index0 */
+  --lw-alternation-index1-color: #111; /*Alternation color for index1 */
+  --lw-alternation-index1-border: #9bbb59; /* Alternation border color for index1 */
+  --lw-alternation-index1-background: #9bbb59; /* Alternation background color for index1 */
+  --lw-alternation-index2-color: #fff; /*Alternation color for index2 */
+  --lw-alternation-index2-border: #fc3752; /* Alternation border color for index2 */
+  --lw-alternation-index2-background: #fc3752; /* Alternation background color for index2 */
+  --lw-scroll-bar-background: #3e3e42;
+  --lw-scroll-bar-border: #3e3e42;
+  --lw-scroll-bar-thumb-background: #686868;
+  --lw-scroll-bar-thumb-border: #686868;
+  --lw-scroll-bar-thumb-background-hover: #9e9e9e;
+  --lw-scroll-bar-thumb-border-hover: #9e9e9e;
+  --lw-scroll-bar-thumb-background-active: #444;
+  --lw-scroll-bar-thumb-border-active: #444;
+  --lw-scroll-bar-button-background: #3e3e42;
+  --lw-scroll-bar-button-border: #3e3e42;
+  --lw-scroll-bar-button-color: #999999;
+  --lw-scroll-bar-button-background-hover: #3e3e42;
+  --lw-scroll-bar-button-border-hover: #3e3e42;
+  --lw-scroll-bar-button-color-hover: var(--lw-primary);
+  --lw-scroll-bar-button-background-active: #3e3e42;
+  --lw-scroll-bar-button-border-active: #3e3e42;
+  --lw-scroll-bar-button-color-active: var(--lw-primary);
+}
