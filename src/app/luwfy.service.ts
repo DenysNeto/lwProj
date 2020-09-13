@@ -12,6 +12,7 @@ import { blocksLuwfy } from "./dynamicLoader";
 import { HttpClient } from "@angular/common/http";
 import { PlaceholderComponent } from "@luwfy/default-component-angular-luwfy";
 import { LuwfyFlowUiCanvasLibraryComponent } from "luwfy-flow-ui-canvas-library";
+import { GoJSComponentProject } from "./luwfy-component/luwfy-component.component";
 
 @Injectable({
   providedIn: "root",
@@ -23,10 +24,12 @@ export class LuwfyService {
   getFlowCheck = new Subject<any>();
   flows = [];
   elements = [];
+  needsToLoad = [];
   public components = {
     placeholderComponent: PlaceholderComponent,
     //@ts-ignore
-    gojsComponent: LuwfyFlowUiCanvasLibraryComponent,
+    // gojsComponent: GoJSComponent,
+    goJsProject: GoJSComponentProject,
   };
   private pages_data = {};
   private page_data = new Subject<any>();
@@ -66,8 +69,38 @@ export class LuwfyService {
             for (let block of this.flows) {
               if (block.type == "template") {
                 //this.getAllTheTagsTemplate(block.template);
+                // if (block.format == "rivets") {
+                //   if (
+                //     this.needsToLoad.indexOf(
+                //       "../assets/luwfyScripts/rivets.bundled.min.js"
+                //     ) == -1
+                //   ) {
+                //     this.needsToLoad.push(
+                //       "../assets/luwfyScripts/rivets.bundled.min.js"
+                //     );
+                //   }
+                // }
               }
             }
+            // if (this.needsToLoad.length > 0) {
+
+            //   var that = this;
+            //   let loadAllwithCB = () => {
+            //     let script;
+            //     if (that.needsToLoad) {
+            //       script = this.needsToLoad.shift();
+            //     }
+            //     if (script) {
+            //       that.appendScript(script, loadAllwithCB);
+            //     } else {
+            //       that.setRuntime();
+            //     }
+            //   };
+            //   loadAllwithCB();
+            // } else {
+            //   this.setRuntime();
+            // }
+
             this.setRuntime();
           }
         });
