@@ -1071,13 +1071,17 @@ export class GoJSComponentProject implements OnInit {
     ];
 
     setTimeout(() => {
-      this.myDiagram.model = go.GraphLinksModel.fromJson(this.model);
+      if(this.model && this.model.nodeDataArray)
+      {
+
+        this.myDiagram.model = go.GraphLinksModel.fromJson(this.model);
+      }
+       
     }, 1000);
 
     //TODO set template type
 
-    console.log("TTTEERRR", this.model.nodeDataArray);
-    this.model.nodeDataArray.forEach((arrElem) => {
+   this.model && this.model.nodeDataArray &&  this.model.nodeDataArray.forEach((arrElem) => {
       let outputPorts = [];
       for (
         let i = 0;
@@ -1128,6 +1132,15 @@ export class GoJSComponentProject implements OnInit {
         "goJsCanvasObservable"
       ].subscriber
     );
+    window["Luwfy"].contexts.contexts.observable.context[
+      "goJsCanvasObservable"
+    ]
+    
+    && 
+    window["Luwfy"].contexts.contexts.observable.context[
+      "goJsCanvasObservable"
+    ].subscriber
+    &&
 
     window["Luwfy"].contexts.contexts.observable.context[
       "goJsCanvasObservable"

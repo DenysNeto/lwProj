@@ -18,7 +18,11 @@
     "x": 780,
     "y": 40,
     "z": "d4ec89ff.2cfac8",
-    "wires": [["9af7378e.e55f18"]],
+    "wires": [
+      [
+        "9af7378e.e55f18"
+      ]
+    ],
     "outputSuccess": false,
     "outputError": false,
     "addToPrint": "false",
@@ -43,7 +47,9 @@
     "configAddEvent": [
       {
         "key": "lw-tree",
-        "event": ["change"]
+        "event": [
+          "change"
+        ]
       }
     ]
   },
@@ -54,14 +60,23 @@
     "x": 40,
     "y": 40,
     "z": "d4ec89ff.2cfac8",
-    "wires": [["58a0078f.08fa28"]],
+    "wires": [
+      [
+        "58a0078f.08fa28"
+      ]
+    ],
     "outputSuccess": false,
     "outputError": false,
     "url": "/main"
   },
   {
     "id": "8f33f3be.8ef7",
-    "wires": [["2a4680aa.68ca5", "61c3640b.247c6c"]],
+    "wires": [
+      [
+        "2a4680aa.68ca5",
+        "61c3640b.247c6c"
+      ]
+    ],
     "outputs": 1,
     "type": "component",
     "x": 600,
@@ -75,7 +90,11 @@
   },
   {
     "id": "58a0078f.08fa28",
-    "wires": [["c1aca304.830b4"]],
+    "wires": [
+      [
+        "c1aca304.830b4"
+      ]
+    ],
     "outputs": 1,
     "type": "http request",
     "x": 60,
@@ -121,13 +140,19 @@
     "configAddEvent": [
       {
         "key": "mwc-button",
-        "event": ["click"]
+        "event": [
+          "click"
+        ]
       }
     ]
   },
   {
     "id": "4112d6ad.84dd68",
-    "wires": [["2bf4432c.b38fac"]],
+    "wires": [
+      [
+        "2bf4432c.b38fac"
+      ]
+    ],
     "outputs": 1,
     "type": "view in",
     "x": 60,
@@ -139,7 +164,12 @@
   },
   {
     "id": "2bf4432c.b38fac",
-    "wires": [["a5166070.eaa77"], []],
+    "wires": [
+      [
+        "a5166070.eaa77"
+      ],
+      []
+    ],
     "outputs": 2,
     "type": "template",
     "x": 480,
@@ -155,7 +185,13 @@
   },
   {
     "id": "f8411f29.bb9fd",
-    "wires": [["560eeeb.73dcc1"], [], []],
+    "wires": [
+      [
+        "560eeeb.73dcc1"
+      ],
+      [],
+      []
+    ],
     "outputs": 3,
     "type": "rx subscriber",
     "x": 420,
@@ -183,7 +219,12 @@
   },
   {
     "id": "9b3aa3ae.6ccef",
-    "wires": [["d2869d44.c2b39"], []],
+    "wires": [
+      [
+        "d2869d44.c2b39"
+      ],
+      []
+    ],
     "outputs": 2,
     "type": "template",
     "x": 160,
@@ -213,7 +254,12 @@
   },
   {
     "id": "7cf5ba47.3ee384",
-    "wires": [["9b3aa3ae.6ccef", "ba5692b5.3ac6d"]],
+    "wires": [
+      [
+        "9b3aa3ae.6ccef",
+        "ba5692b5.3ac6d"
+      ]
+    ],
     "outputs": 1,
     "type": "json",
     "x": 20,
@@ -233,7 +279,12 @@
     "x": 575.9209723583176,
     "y": 1056.7941661766372,
     "z": "d4ec89ff.2cfac8",
-    "wires": [["b8103092.de9f6"], []],
+    "wires": [
+      [
+        "b8103092.de9f6"
+      ],
+      []
+    ],
     "outputSuccess": false,
     "outputError": true,
     "addToPrint": "true",
@@ -249,7 +300,13 @@
     "x": 378.9209723583177,
     "y": 1146.7941661766372,
     "z": "d4ec89ff.2cfac8",
-    "wires": [["57beff59.68b19"], [], []],
+    "wires": [
+      [
+        "57beff59.68b19"
+      ],
+      [],
+      []
+    ],
     "outputSuccess": false,
     "outputError": false,
     "useWindow": false,
@@ -270,7 +327,9 @@
     "configAddEvent": [
       {
         "key": "ul",
-        "event": ["click"]
+        "event": [
+          "click"
+        ]
       }
     ]
   },
@@ -293,14 +352,25 @@
     "x": 180,
     "y": 1020,
     "z": "d4ec89ff.2cfac8",
-    "wires": [["a1f1385d.daae78"]],
+    "wires": [
+      [
+        "a1f1385d.daae78"
+      ]
+    ],
     "outputSuccess": false,
     "outputError": false,
     "url": "/listpage"
   },
   {
     "id": "11f36286.daf77d",
-    "wires": [["38746dd4.7ed7f2", "5acfd0d4.2fc85"], [], []],
+    "wires": [
+      [
+        "38746dd4.7ed7f2",
+        "5acfd0d4.2fc85"
+      ],
+      [],
+      []
+    ],
     "outputs": 3,
     "type": "rx subscriber",
     "x": 620,
@@ -331,7 +401,11 @@
   },
   {
     "id": "5acfd0d4.2fc85",
-    "wires": [["2831a62a.5e2dda"]],
+    "wires": [
+      [
+        "2831a62a.5e2dda"
+      ]
+    ],
     "outputs": 1,
     "type": "function",
     "x": 1120,
@@ -355,7 +429,9 @@
   },
   {
     "id": "810f7e4e.542bc",
-    "wires": [[]],
+    "wires": [
+      []
+    ],
     "outputs": 1,
     "type": "function",
     "x": 320,
@@ -367,7 +443,12 @@
   },
   {
     "id": "7702c3da.44049c",
-    "wires": [["e9b38422.32cbc8"], []],
+    "wires": [
+      [
+        "e9b38422.32cbc8"
+      ],
+      []
+    ],
     "outputs": 2,
     "type": "template",
     "x": 480,
@@ -382,7 +463,12 @@
   },
   {
     "id": "83495635.b9b718",
-    "wires": [["c3c5739a.28e7d", "8f33f3be.8ef7"]],
+    "wires": [
+      [
+        "c3c5739a.28e7d",
+        "8f33f3be.8ef7"
+      ]
+    ],
     "outputs": 1,
     "type": "function",
     "x": 420,
@@ -419,7 +505,14 @@
   },
   {
     "id": "ae21be82.41976",
-    "wires": [["c5f54bec.116db8"], ["c5f54bec.116db8"]],
+    "wires": [
+      [
+        "c5f54bec.116db8"
+      ],
+      [
+        "c5f54bec.116db8"
+      ]
+    ],
     "outputs": 2,
     "type": "template",
     "x": 700,
@@ -449,7 +542,10 @@
   },
   {
     "id": "c32a0ca5.f42b8",
-    "wires": [[], []],
+    "wires": [
+      [],
+      []
+    ],
     "outputs": 2,
     "type": "template",
     "x": 240,
@@ -464,7 +560,12 @@
   },
   {
     "id": "a0b109fe.a882d8",
-    "wires": [["fa431231.2f401", "83495635.b9b718"]],
+    "wires": [
+      [
+        "fa431231.2f401",
+        "83495635.b9b718"
+      ]
+    ],
     "outputs": 1,
     "type": "change",
     "x": 240,
@@ -498,7 +599,12 @@
   },
   {
     "id": "5e346448.7d429c",
-    "wires": [["c25b4016.b50a2", "b085f90.f01c608"]],
+    "wires": [
+      [
+        "c25b4016.b50a2",
+        "b085f90.f01c608"
+      ]
+    ],
     "outputs": 1,
     "type": "view in",
     "x": 1160,
@@ -510,7 +616,13 @@
   },
   {
     "id": "c25b4016.b50a2",
-    "wires": [["4291db8d.2c0c54", "d475125b.5d718"], []],
+    "wires": [
+      [
+        "4291db8d.2c0c54",
+        "d475125b.5d718"
+      ],
+      []
+    ],
     "outputs": 2,
     "type": "template",
     "x": 1320,
@@ -528,7 +640,11 @@
   },
   {
     "id": "271be9e.7fc5f16",
-    "wires": [["522a340d.fb950c"]],
+    "wires": [
+      [
+        "522a340d.fb950c"
+      ]
+    ],
     "outputs": 1,
     "type": "component",
     "x": 1460,
@@ -553,7 +669,12 @@
   },
   {
     "id": "4291db8d.2c0c54",
-    "wires": [["271be9e.7fc5f16", "c5a92907.420ac8"]],
+    "wires": [
+      [
+        "271be9e.7fc5f16",
+        "c5a92907.420ac8"
+      ]
+    ],
     "outputs": 1,
     "type": "function",
     "x": 1440,
@@ -617,7 +738,10 @@
   },
   {
     "id": "d36a1641.6c8528",
-    "wires": [[], []],
+    "wires": [
+      [],
+      []
+    ],
     "outputs": 2,
     "type": "template",
     "x": 815,
@@ -644,7 +768,11 @@
   },
   {
     "id": "c1aca304.830b4",
-    "wires": [["636533fd.eaea9c"]],
+    "wires": [
+      [
+        "636533fd.eaea9c"
+      ]
+    ],
     "outputs": 1,
     "type": "http request",
     "x": 59,
@@ -677,7 +805,12 @@
   },
   {
     "id": "636533fd.eaea9c",
-    "wires": [["78197e86.29e13", "a0b109fe.a882d8"]],
+    "wires": [
+      [
+        "78197e86.29e13",
+        "a0b109fe.a882d8"
+      ]
+    ],
     "outputs": 1,
     "type": "function",
     "x": 264,
@@ -718,7 +851,11 @@
   {
     "id": "334ca1.570e336",
     "wires": [
-      ["ab91a76d.172288", "1fe3c09a.3a55cf", "a16ee931.febe38"],
+      [
+        "ab91a76d.172288",
+        "1fe3c09a.3a55cf",
+        "a16ee931.febe38"
+      ],
       [],
       []
     ],
@@ -737,7 +874,11 @@
   },
   {
     "id": "ab91a76d.172288",
-    "wires": [["4d6c57d7.e6bfc8"]],
+    "wires": [
+      [
+        "4d6c57d7.e6bfc8"
+      ]
+    ],
     "outputs": 1,
     "type": "function",
     "x": 1480,
@@ -750,7 +891,9 @@
   },
   {
     "id": "d27fbada.a4c538",
-    "wires": [[]],
+    "wires": [
+      []
+    ],
     "outputs": 1,
     "type": "change",
     "x": 1180,
@@ -785,7 +928,11 @@
   },
   {
     "id": "4d6c57d7.e6bfc8",
-    "wires": [["e86086dd.584168"]],
+    "wires": [
+      [
+        "e86086dd.584168"
+      ]
+    ],
     "outputs": 1,
     "type": "change",
     "x": 1660,
@@ -805,7 +952,12 @@
   },
   {
     "id": "26415ba.9799fa4",
-    "wires": [["ba52e49e.7ca178", "18fdf4f3.eb925b"]],
+    "wires": [
+      [
+        "ba52e49e.7ca178",
+        "18fdf4f3.eb925b"
+      ]
+    ],
     "outputs": 1,
     "type": "Websocket in",
     "x": 1240,
@@ -846,7 +998,12 @@
   },
   {
     "id": "9af7378e.e55f18",
-    "wires": [["454ba8db.5ff5e8"], []],
+    "wires": [
+      [
+        "454ba8db.5ff5e8"
+      ],
+      []
+    ],
     "outputs": 2,
     "type": "template",
     "x": 960,
@@ -864,7 +1021,12 @@
   },
   {
     "id": "18fdf4f3.eb925b",
-    "wires": [["1bf8d872.0feb78", "bb8d97ad.61b9c8"]],
+    "wires": [
+      [
+        "1bf8d872.0feb78",
+        "bb8d97ad.61b9c8"
+      ]
+    ],
     "outputs": 1,
     "type": "function",
     "x": 1040,
@@ -889,7 +1051,10 @@
   },
   {
     "id": "ba11bb95.922b38",
-    "wires": [[], []],
+    "wires": [
+      [],
+      []
+    ],
     "outputs": 2,
     "type": "template",
     "x": 1160,
@@ -905,7 +1070,10 @@
   },
   {
     "id": "f39269eb.abff98",
-    "wires": [[], []],
+    "wires": [
+      [],
+      []
+    ],
     "outputs": 2,
     "type": "template",
     "x": 1560,
@@ -921,7 +1089,10 @@
   },
   {
     "id": "c5e30a07.a31ce8",
-    "wires": [[], []],
+    "wires": [
+      [],
+      []
+    ],
     "outputs": 2,
     "type": "template",
     "x": 1620,
@@ -939,7 +1110,13 @@
   },
   {
     "id": "15bd6140.424aff",
-    "wires": [["7c4a8e40.81158"], [], []],
+    "wires": [
+      [
+        "7c4a8e40.81158"
+      ],
+      [],
+      []
+    ],
     "outputs": 3,
     "type": "rx subscriber",
     "x": 1112,
@@ -969,7 +1146,9 @@
   },
   {
     "id": "bb8d97ad.61b9c8",
-    "wires": [[]],
+    "wires": [
+      []
+    ],
     "outputs": 1,
     "type": "change",
     "x": 1220,
@@ -989,7 +1168,12 @@
   },
   {
     "id": "454ba8db.5ff5e8",
-    "wires": [["21e409ec.51c286"], []],
+    "wires": [
+      [
+        "21e409ec.51c286"
+      ],
+      []
+    ],
     "outputs": 2,
     "type": "template",
     "x": 850,
@@ -1005,7 +1189,12 @@
   },
   {
     "id": "93e18236.ec9b7",
-    "wires": [["ba8e64a7.903e98", "b3c90fda.66f9e"]],
+    "wires": [
+      [
+        "ba8e64a7.903e98",
+        "b3c90fda.66f9e"
+      ]
+    ],
     "outputs": 1,
     "type": "view in",
     "x": 40,
@@ -1017,7 +1206,12 @@
   },
   {
     "id": "d5540496.832378",
-    "wires": [["8a56ac63.8d6b6"], []],
+    "wires": [
+      [
+        "9e1909f9.a6e688"
+      ],
+      []
+    ],
     "outputs": 2,
     "type": "template",
     "x": 760,
@@ -1041,7 +1235,12 @@
     "x": 220,
     "y": 1380,
     "z": "d4ec89ff.2cfac8",
-    "wires": [["58889ad9.2096e4", "ef9f4883.1197f8"]],
+    "wires": [
+      [
+        "58889ad9.2096e4",
+        "ef9f4883.1197f8"
+      ]
+    ],
     "outputSuccess": false,
     "outputError": false,
     "url": "https://sandboxcrm.luwfy.com/luwfy-flow/lwapp/a7b2842e-7cba-4201-a595-75bd6b650e90",
@@ -1057,7 +1256,12 @@
   },
   {
     "id": "58889ad9.2096e4",
-    "wires": [["4569ae1f.0dca3", "3b70a732.82f968"]],
+    "wires": [
+      [
+        "4569ae1f.0dca3",
+        "3b70a732.82f968"
+      ]
+    ],
     "outputs": 1,
     "type": "function",
     "x": 420,
@@ -1132,7 +1336,9 @@
   },
   {
     "id": "6e7bc413.17b34c",
-    "wires": [[]],
+    "wires": [
+      []
+    ],
     "outputs": 1,
     "type": "change",
     "x": 284,
@@ -1143,7 +1349,10 @@
   },
   {
     "id": "16708f1b.13be21",
-    "wires": [[], []],
+    "wires": [
+      [],
+      []
+    ],
     "outputs": 2,
     "type": "template",
     "x": 462,
@@ -1154,7 +1363,9 @@
   },
   {
     "id": "7cb3eafb.c5a5a4",
-    "wires": [[]],
+    "wires": [
+      []
+    ],
     "outputs": 1,
     "type": "debug settings",
     "x": 803,
@@ -1167,10 +1378,17 @@
     "id": "d8023bb9.89f028",
     "outputs": 3,
     "type": "rx subscriber",
-    "x": 662.0816956461044,
-    "y": 1535.1854400802915,
+    "x": 640,
+    "y": 1460,
     "z": "d4ec89ff.2cfac8",
-    "wires": [["15c21167.6b910f", "dc6da03f.2e69c"], [], []],
+    "wires": [
+      [
+        "15c21167.6b910f",
+        "dc6da03f.2e69c"
+      ],
+      [],
+      []
+    ],
     "useWindow": true,
     "customEvent": false,
     "event-target-id": "flowboardslist",
@@ -1184,8 +1402,8 @@
     "wires": [],
     "outputs": 0,
     "type": "debug",
-    "x": 883,
-    "y": 1539.1071327563777,
+    "x": 880,
+    "y": 1460,
     "z": "d4ec89ff.2cfac8",
     "outputSuccess": false,
     "outputError": false,
@@ -1194,11 +1412,16 @@
   },
   {
     "id": "dc6da03f.2e69c",
-    "wires": [["7eddaf11.846d5", "cce04e9d.99eb6"]],
+    "wires": [
+      [
+        "7eddaf11.846d5",
+        "cce04e9d.99eb6"
+      ]
+    ],
     "outputs": 1,
     "type": "function",
-    "x": 854,
-    "y": 1671.633915945472,
+    "x": 880,
+    "y": 1580,
     "z": "d4ec89ff.2cfac8",
     "outputSuccess": false,
     "outputError": false,
@@ -1206,7 +1429,11 @@
   },
   {
     "id": "3b70a732.82f968",
-    "wires": [["d5540496.832378"]],
+    "wires": [
+      [
+        "d5540496.832378"
+      ]
+    ],
     "outputs": 1,
     "type": "change",
     "x": 600,
@@ -1226,23 +1453,27 @@
   },
   {
     "id": "7eddaf11.846d5",
-    "wires": [["cc17f802.47bc38", "9e1909f9.a6e688"]],
+    "wires": [
+      [
+        "cc17f802.47bc38"
+      ]
+    ],
     "outputs": 1,
     "type": "function",
-    "x": 1033,
-    "y": 1664.1071327563777,
+    "x": 1060,
+    "y": 1520,
     "z": "d4ec89ff.2cfac8",
     "outputSuccess": false,
     "outputError": false,
-    "func": "let inputDataArr = msg['currentFlow'];\n\n let linkDataArrayTemp = [];\n    let nodeDataArrayTemp = [];\nconsole.log(\"QQQ0\"  , inputDataArr );\n    inputDataArr.forEach((inputElem) => {\n      console.log(\"QQQ000\"  , inputDataArr );\n      if (inputElem.type != \"flowboard\") {\n        let objDataArray = {\n          outputs: inputElem.outputs,\n          outputSuccess: inputElem.outputSuccess,\n          outputError: inputElem.outputError,\n           input: true,\n           color: \"red\",\n          type: inputElem.type,\n          \n          name: inputElem['name'] || inputElem.type,\n          key: inputElem.id,\n          z: inputElem.z\n          // loc: \n        };\n        nodeDataArrayTemp.push(objDataArray);\n      }\n\n      else {\n        let objDataFlowboard = {\n          \"key\": inputElem.id,\n          \"type\": inputElem.type,\n          \"label\": inputElem.label,\n          \n          \"disabled\": inputElem.disabled,\n          \"name\" : inputElem.type,\n          \n        }\n        \n       // nodeDataArrayTemp.push(objDataFlowboard);\n        //TODO add flowboard to nodeDataArray\n      }\n      \n      console.log(\"QQQ1\"  , inputDataArr );\n\n      if (inputElem.wires) {\n        inputElem.wires.forEach((wirePortArr, index) => {\n          wirePortArr.forEach((wirePortItem) => {\n            let objLinkDataArr = {\n              from: inputElem.id,\n              to: wirePortItem,\n              outPortId: index + 1,\n              inPortId: \"INPUT\"\n            };\n\n            linkDataArrayTemp.push(objLinkDataArr);\n          })\n        })\n      }\n    })\n\n\nconsole.log(\"QQQ1_1\"  , inputDataArr );\n\n\n    let payload = {\n      \"class\": \"go.GraphLinksModel\",\n      \"nodeCategoryProperty\": \"type\",\n      \"linkFromPortIdProperty\": \"outPortId\",\n      \"linkToPortIdProperty\": \"inPortId\",\n      \"linkDataArray\": [...linkDataArrayTemp],\n      \"nodeDataArray\": [...nodeDataArrayTemp]\n    }\n    \n    console.log(\"FUNC_PAYLOAD\"  , payload );\n\n\nmsg['payload'] = payload;\n    return msg;\n\n\n\n\n\n"
+    "func": "let inputDataArr = msg['currentFlow'];\n\n let linkDataArrayTemp = [];\n    let nodeDataArrayTemp = [];\nconsole.log(\"QQQ0\"  , inputDataArr );\n    inputDataArr.forEach((inputElem) => {\n      console.log(\"QQQ000\"  , inputDataArr );\n      if (inputElem.type != \"flowboard\") {\n        let objDataArray = {\n          outputs: inputElem.outputs,\n          outputSuccess: inputElem.outputSuccess,\n          outputError: inputElem.outputError,\n           input: true,\n           color: \"red\",\n          type: inputElem.type,\n          \n          name: inputElem['name'] || inputElem.type,\n          key: inputElem.id,\n          z: inputElem.z\n          // loc: \n        };\n        nodeDataArrayTemp.push(objDataArray);\n      }\n\n      else {\n        let objDataFlowboard = {\n          \"key\": inputElem.id,\n          \"type\": inputElem.type,\n          \"label\": inputElem.label,\n          \n          \"disabled\": inputElem.disabled,\n          \"name\" : inputElem.type,\n          \n        }\n        \n       // nodeDataArrayTemp.push(objDataFlowboard);\n        //TODO add flowboard to nodeDataArray\n      }\n      \n      console.log(\"QQQ1\"  , inputDataArr );\n\n      if (inputElem.wires) {\n        inputElem.wires.forEach((wirePortArr, index) => {\n          wirePortArr.forEach((wirePortItem) => {\n            let objLinkDataArr = {\n              from: inputElem.id,\n              to: wirePortItem,\n              outPortId: index + 1,\n              inPortId: \"INPUT\"\n            };\n\n            linkDataArrayTemp.push(objLinkDataArr);\n          })\n        })\n      }\n    })\n\n\nconsole.log(\"QQQ1_1\"  , inputDataArr );\n\n\n    let payload = {\n      \"class\": \"go.GraphLinksModel\",\n      \"nodeCategoryProperty\": \"type\",\n      \"linkFromPortIdProperty\": \"outPortId\",\n      \"linkToPortIdProperty\": \"inPortId\",\n      \"linkDataArray\": [...linkDataArrayTemp],\n      \"nodeDataArray\": [...nodeDataArrayTemp]\n    }\n    \n    console.log(\"FUNC_PAYLOAD\"  , payload );\n\n\nmsg['payload'] = payload;\n\n\nwindow.CANVAS.model = {...payload};\nwindow.CANVAS.load();\n\n\n\n    return msg;\n\n\n\n\n\n"
   },
   {
     "id": "cce04e9d.99eb6",
     "wires": [],
     "outputs": 0,
     "type": "debug",
-    "x": 910,
-    "y": 1775.1071327563777,
+    "x": 920,
+    "y": 1760,
     "z": "d4ec89ff.2cfac8",
     "outputSuccess": false,
     "outputError": false,
@@ -1254,8 +1485,8 @@
     "wires": [],
     "outputs": 0,
     "type": "debug",
-    "x": 1104,
-    "y": 1780.1071327563777,
+    "x": 1080,
+    "y": 1660,
     "z": "d4ec89ff.2cfac8",
     "outputSuccess": false,
     "outputError": false,
@@ -1266,10 +1497,14 @@
     "id": "9e1909f9.a6e688",
     "outputs": 1,
     "type": "component",
-    "x": 1200,
-    "y": 1440,
+    "x": 940,
+    "y": 1300,
     "z": "d4ec89ff.2cfac8",
-    "wires": [["8a56ac63.8d6b6"]],
+    "wires": [
+      [
+        "8a56ac63.8d6b6"
+      ]
+    ],
     "outputSuccess": false,
     "outputError": false,
     "componentName": "goJsProject",
