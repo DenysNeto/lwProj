@@ -1221,7 +1221,7 @@
     "outputError": true,
     "format": "handlebars",
     "output": "str",
-    "template": "   \n<p>QQQQQQQQQQQQQQQQQ</p>\n\n<lw-list-box id=\"lw-palette-tree\" event-target-id=\"flowboardslist\"> FLOWBOARDS LIST \n  {{#each  flowPayload}}\n  {{#if this.type \"==\" \"flowboard\" }}\n  <lw-list-item value={{this.id}}>{{this.label}}</lw-list-item>\n{{/if}}\n  {{/each}}\n </lw-list-box>\n",
+    "template": "   \n<p>QQQQQQQQQQQQQQQQQ</p>\n\n<lw-list-box id=\"lw-palette-tree\" event-target-id=\"flowboardslist\"> FLOWBOARDS LIST \n  {{#each  flowPayload}}\n  {{#if this.type \"==\" \"flowboard\" }}\n  <lw-list-item value={{this.id}}><a href=\"/workspace\">{{this.label}}</a> </lw-list-item>\n{{/if}}\n  {{/each}}\n </lw-list-box>\n",
     "name": "Flowboard List",
     "addToPrint": "true",
     "order": "1",
@@ -1232,8 +1232,8 @@
     "id": "ba8e64a7.903e98",
     "outputs": 1,
     "type": "http request",
-    "x": 220,
-    "y": 1380,
+    "x": 200,
+    "y": 1340,
     "z": "d4ec89ff.2cfac8",
     "wires": [
       [
@@ -1264,8 +1264,8 @@
     ],
     "outputs": 1,
     "type": "function",
-    "x": 420,
-    "y": 1360,
+    "x": 400,
+    "y": 1340,
     "z": "d4ec89ff.2cfac8",
     "outputSuccess": false,
     "outputError": false,
@@ -1510,5 +1510,87 @@
     "componentName": "goJsProject",
     "order": "3",
     "componentConfig": "payload"
+  },
+  {
+    "id": "1d21e043.13a03",
+    "wires": [
+      [
+        "5686f051.9e55d"
+      ]
+    ],
+    "outputs": 1,
+    "type": "view in",
+    "x": 22,
+    "y": 1734.5319497354294,
+    "z": "d4ec89ff.2cfac8",
+    "outputSuccess": false,
+    "outputError": false,
+    "url": "/workspace"
+  },
+  {
+    "id": "5686f051.9e55d",
+    "outputs": 1,
+    "type": "component",
+    "x": 180,
+    "y": 1780,
+    "z": "d4ec89ff.2cfac8",
+    "wires": [
+      [
+        "36c1a06f.d4018"
+      ]
+    ],
+    "outputSuccess": false,
+    "outputError": false,
+    "componentName": "goJsProject",
+    "order": "1",
+    "componentConfig": "payload"
+  },
+  {
+    "id": "4cbcd89a.1c4bd8",
+    "outputs": 1,
+    "type": "component",
+    "x": 1117.957076593339,
+    "y": 414.27737788635545,
+    "z": "d4ec89ff.2cfac8",
+    "wires": [
+      []
+    ],
+    "outputSuccess": false,
+    "outputError": false,
+    "componentName": "goJsProject",
+    "order": "3",
+    "componentConfig": "payload"
+  },
+  {
+    "id": "36c1a06f.d4018",
+    "wires": [
+      [
+        "d58b0219.4d1ef"
+      ],
+      []
+    ],
+    "outputs": 2,
+    "type": "template",
+    "x": 335,
+    "y": 1783.2194686820849,
+    "z": "d4ec89ff.2cfac8",
+    "outputSuccess": false,
+    "outputError": true,
+    "addToPrint": "true",
+    "order": "2",
+    "format": "str",
+    "output": "str",
+    "template": "WORKSPACE"
+  },
+  {
+    "id": "d58b0219.4d1ef",
+    "wires": [],
+    "outputs": 0,
+    "type": "view print",
+    "x": 470,
+    "y": 1742.2194686820849,
+    "z": "d4ec89ff.2cfac8",
+    "outputSuccess": false,
+    "outputError": false
   }
 ]
